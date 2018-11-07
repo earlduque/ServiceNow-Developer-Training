@@ -104,7 +104,7 @@ Alternation is regex's way of doing *or* statements. The `|` operator does not n
 ## Regex in ServiceNow
 In ServiceNow we will mainly be using regexs for validation. In this example we will create a regex that ensures that the user enters their full name. 
 
-Begin by:
+To begin:
 1. Navigate to our Sand Instance of ServiceNow.
 2. Create a new catalog item.
 3. Now in that catalog item create a new single line text variable.
