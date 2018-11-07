@@ -25,9 +25,9 @@ Here I will define some basic metacharacters. *I excluded the forward slashes, /
 | :-----------: | :-----------: | :------: |
 | . | Wildcard, matches every character except \n | h.t = "hot" & "hit" &"h$t"... |
 | \ | Allows literal meaning of metachar | 9\.0 = only "9.0" now|
-| \t | Represent a tab character | \thi = "		hi"	|
-| /r or /n | is a newline character| hi\n = "hi\n" |
-| [] | Is a character set | h[ia]t = "hit" and "hat" |
+| \t | Represents a tab character | \thi = "		hi"	|
+| /r or /n | Represents a newline character| hi\n = "hi\n" |
+| [] | Defines a character set | h[ia]t = "hit" and "hat" |
 
 #### Modes
 These expressions can be modified to search to be **global, case-insensitive, multiline, and dot-matches-all** by adding a g, i, m, or s after the second forward slash in the regular expression. For example, /regex/g. 
