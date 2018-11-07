@@ -107,7 +107,7 @@ On the workflows tab in the right side of the workflow interface, pull in the "S
 
 4. Adjust the layout of the four tiles so that they go in this order:
 
-PICTURE
+![Workflow 1](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/Workflow.png)
 
 5. Right now, this workflow sends an email to the requester (Standard open message) letting them know their request item is being worked on, and then immediately sends an email saying that their request item has been completed (Standard close message). Let's make it a bit more complex
 6. Go to the "core" tab on the right. This tab contains all the tile types you can add to your workflow to automate your form
@@ -115,17 +115,17 @@ PICTURE
 	* Name: If checkbox is true
 	* Condition: in the first box, choose "variables" and then choose your catalog item for "Select Item" and then choose your checkbox variable for "Select Variable" and set it to "is true"
 
-	PICTURE
+	![Workflow 2](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/Workflow2.png)
 
 	* Hit save
 8. Position this new "If" tile after the "Standard open message tile" and connect the two with an arrow, you can leave the "standard close message" tile as disconnected for now
 
-PICTURE
+![Workflow 3](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/Workflow3.png)
 
 9. Add another tile: "Core Activities > Approvals > Approval –User":
 	* Name: Get approval from [your name]
 	* Stage: Waiting for approval
-	* Users: click the PICTURE icon to add your name to this list
+	* Users: click the ![Person](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/person.png) icon to add your name to this list
 	* Save
 10. Attach this approval activity to the "yes" part of your "if" activity
 11. Add another tile: "Core Activities > Tasks > Catalog Task"
@@ -148,9 +148,9 @@ PICTURE
 16. Finally, open the "Standard close message" activity and add this value:a.Stage: Completed
 17. That's it! Your workflow should have the same tiles and same connections as this image (but not necessarily the same layout of tiles. It doesn't matter how you lay out the tiles, it's the connections that matter):
 
-PICTURE
+![Workflow 4](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/Workflow4.png)
 
-18. Click on the "hamburger icon" on the top left PICTURE and select publish
+18. Click on the "hamburger icon" on the top left ![Hamburger](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/hamburger.png) and select publish
 19. Go back to your catalog item
 20. In the workflow field, add your workflow and save/update your item
 
