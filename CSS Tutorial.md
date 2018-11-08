@@ -43,48 +43,49 @@ Enable preview on your widget by clicking on the 3-bar hamburger menu on the
 right and checking "Enable Preview". This will allow you to see what your widget
 looks like after you hit Save to whatever changes you've made.
 
+Your widget view should look something like this:
+![Initial Widget View](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/initial-widget-view.png)
+
 ## Add HTML to Your Widget
 
 Replace the code in HTML Template with this:
 
 ```html
 <div>
-  <h1>
-    Hello, World!
-  </h1>
-  <p>
-    Cat ipsum dolor sit amet, lick yarn hanging out of own butt pretend you want to go out but then don't so jump off balcony, onto stranger's head yet i like fish. Jump five feet high and sideways when a shadow moves love you, then bite you why use post when this sofa is here spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce.
-  </p>
+    <h1>Hello, World!</h1>
+    <p>
+        Cat ipsum dolor sit amet, lick yarn hanging out of own butt pretend you
+        want to go out but then don't so jump off balcony, onto stranger's head
+        yet i like fish. Jump five feet high and sideways when a shadow moves
+        love you, then bite you why use post when this sofa is here spot
+        something, big eyes, big eyes, crouch, shake butt, prepare to pounce.
+    </p>
 </div>
 
 <div>
-  <h3>
-    Shopping List:
-  </h3>
-  <ul>
-    <li>Bananas</li>
-    <li>Potatoes</li>
-    <li>Rice</li>
-  </ul>
-  <h3>
-    To Do List:
-  </h3>
-  <ol>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-  </ol>
+    <h3>Shopping List:</h3>
+    <ul>
+        <li>Bananas</li>
+        <li>Potatoes</li>
+        <li>Rice</li>
+    </ul>
+    <h3>To Do List:</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
 </div>
 
 <div>
-  <p>
-    Cat ipsum dolor sit amet, lick <span>yarn</span> hanging out of own butt pretend you want to go out but then don't so jump off balcony, onto stranger's head yet i like
-  </p>
+    <p>
+        Cat ipsum dolor sit amet, lick <span>yarn</span> hanging out of own butt
+        pretend you want to go out but then don't so jump off balcony, onto
+        stranger's head yet i like
+    </p>
 </div>
 
-<a href="#">Link 1</a>
-<a href="#">Link 2</a>
-<a href="#">Link 3</a>
+<a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>
 ```
 
 ## Add CSS to Your Widget
@@ -128,9 +129,7 @@ problem, you would need to use a more specific CSS selector.
 Add the class `hello` to the first `div` of your HTML:
 
 ```html
-<div class="hello">
- ...
-</div>
+<div class="hello">...</div>
 ```
 
 To select by class, you would use this structure:
@@ -170,9 +169,7 @@ a given element. It's the most efficient way to select a single element.
 Add the id `special` to the second `div` element of your HTML:
 
 ```html
-<div id="special">
-...
-</div>
+<div id="special">...</div>
 ```
 
 Add this to your CSS:
@@ -243,6 +240,10 @@ div p {
 
 Save your widget. All `ul` and `li` elements will have underlines, and all `p`
 elements inside of `div` elements will be bold.
+
+Here's what your final widget should look like as a reference:
+
+![Final Widget View](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/final-widget-view.png)
 
 ## Resources
 
