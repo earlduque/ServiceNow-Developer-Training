@@ -1,4 +1,4 @@
-# ServiceNow Foundations Videos [Link to videos](https://community.servicenow.com/community?id=community_article&sys_id=a2dc2a65dbd0dbc01dcaf3231f96197e)
+# ServiceNow Foundations Videos ([Link to videos](https://community.servicenow.com/community?id=community_article&sys_id=a2dc2a65dbd0dbc01dcaf3231f96197e))
 * Part One | User Experience
 	* Quick Tour of the ServiceNow Platform: Reinforces what the training videos presented. Shows where the different frames like banner and content are located.
 * Part Two | Getting Started
