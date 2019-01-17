@@ -241,6 +241,58 @@ div p {
 Save your widget. All `ul` and `li` elements will have underlines, and all `p`
 elements inside of `div` elements will be bold.
 
+### Advanced Declarations
+
+#### Multiple Classes
+
+Add this to the end your HTML:
+
+```html
+<h2 class="class1">I'm only class1</h2>
+<h2 class="class2">I'm only class2</h2>
+<h2 class="class1 class2">I have class1 and class2!</h2>
+```
+
+In this example, we defined two classes for the last `h2` at the same time. `class1` and `class2` are separate CSS classes, and both of their properties will be applied to this `h2`.
+
+Add this CSS:
+
+```css
+.class1 {
+    color: darkorange;
+}
+
+.class2 {
+    border: 10px dotted teal;
+}
+```
+
+Save your widget. Notice how the last `h2` has both the color and border properties applied to it, compared to the other `h2`s with only a single property (since they only have one class).
+
+What if you want the change the background color of the last `h2` without changing the styles of the other `h2`s? In this case, you want to select the last `h2` element by using the multiple class selector.
+
+To select an HTML element with multiple classes, you use this structure:
+
+```css
+.class1.class2 {
+    property: value;
+}
+```
+
+This means to select all elements that have class1 and class2.
+
+Add this to your CSS:
+
+```css
+.class1.class2 {
+    background: black;
+}
+```
+
+Save your widget and see how the last `h2` now has a black background.
+
+### Final Widget
+
 Here's what your final widget should look like as a reference:
 
 ![Final Widget View](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/final-widget-view.png)
