@@ -168,55 +168,55 @@
 	* Can only be used for custom applications within ServiceNow
 	
 ###	Important Concepts:
-	Naming conventions
-	ServiceNow > under_scores
-	Vanilla JavaScript > camelCasing
-	Generally, if creating a new variable in a script, use the camelcase convention
-	Use underscores if referencing an existing variable in ServiceNow
-	Most fields are objects, not strings
-	There’s a difference between the display value and the field value
+	* Naming conventions
+	* ServiceNow > under_scores
+	* Vanilla JavaScript > camelCasing
+	* Generally, if creating a new variable in a script, use the camelcase convention
+	* Use underscores if referencing an existing variable in ServiceNow
+	* Most fields are objects, not strings
+	* There’s a difference between the display value and the field value
 
 ## BUSINESS RULES:
 ###	Business Rules only run on the server side
-	A business rule is a server-side script that runs when a record is displayed, inserted, updated or deleted, or when a table is queried.
-	Most common scripting location
-	Server-side language: Mozilla Rhine (JavaScript runtime written in Java, since ServiceNow is written in Java)
-	2,400 out-of-the-box business rules
+	* A business rule is a server-side script that runs when a record is displayed, inserted, updated or deleted, or when a table is queried.
+	* Most common scripting location
+	* Server-side language: Mozilla Rhine (JavaScript runtime written in Java, since ServiceNow is written in Java)
+	* 2,400 out-of-the-box business rules
 	
 ###	Client Scripts:
-	Client scripts run on the client (web browser). You can use client scripts to define custom behaviors that run when events occur, such as when a form is loaded or submitted or if a cell changes value.
-	JavaScript on the client side
+	* Client scripts run on the client (web browser). You can use client scripts to define custom behaviors that run when events occur, such as when a form is loaded or submitted or if a cell changes value.
+	* JavaScript on the client side
 	
 ####	Triggered when:
-	Field changes
-	Page loads
-	Form submissions
-	Cell edits
+	* Field changes
+	* Page loads
+	* Form submissions
+	* Cell edits
 	
 ####	Client script ships to the browser when loaded
 	
 ###	Form View:
-	Table: where the script is run
-	UI Type: Desktop, Mobile (Both is best practice)
-	Type: If script runs onChange, onLoad, etc.
-	Field Name: only shows when type is onChange. When that field name changes, the script will run.
-	Script: ServiceNow API is preferable to jQuery to manipulate the DOM directly
+	**Table:** where the script is run
+	**UI Type:** Desktop, Mobile (Both is best practice)
+	**Type:** If script runs onChange, onLoad, etc.
+	**Field Name:** only shows when type is onChange. When that field name changes, the script will run.
+	**Script:** ServiceNow API is preferable to jQuery to manipulate the DOM directly
 	If the UI type is Desktop, you have access to some older, now deprecated Glide methods.
 	
 ###	UI Actions:
-	UI Actions add buttons, links, and context menu items on forms and lists, making the UI more interactive, customizable, and specific to user activities. UI Actions contain scripts that define user functionality.
-	Server-side or client-side
-	Typically configured for form views
+	* UI Actions add buttons, links, and context menu items on forms and lists, making the UI more interactive, customizable, and specific to user activities. UI Actions contain scripts that define user functionality.
+	* Server-side or client-side
+	* Typically configured for form views
 	
 ###	UI Policies:
-	Client side policies
-	Primarily used on forms.
-	Offer an alternative to client scripts for dynamically changing information on a from. Use UI Policies to set custom process flows for tasks.
-	Most of the time these don’t require scripting
-	Used to set forms to:
-	Read only
-	Mandatory
-	Show/Hide
+	* Client side policies
+	* Primarily used on forms.
+	* Offer an alternative to client scripts for dynamically changing information on a from. Use UI Policies to set custom process flows for tasks.
+	* Most of the time these don’t require scripting
+	* Used to set forms to:
+	* Read only
+	* Mandatory
+	* Show/Hide
 	
 	
 ###	Script Includes:
@@ -224,12 +224,12 @@
 	Create script includes to store JavaScript functions and classes for use by server scripts.
 	Each script include defines either an object class or a function.
 	Consider using script includes instead of global business rules because script includes are only loaded on request.
-	Features:
+####	**Features:**
 	Server-side JavaScript
 	Stores JavaScript classes & functions/methods
 	Only runs when invoked
 	Unique since they can be called from anywhere (Client callable option)
-	2 types:
+####	**2 types:**
 	Classless
 	Script Include name **=>** function name
 	Server-side only
@@ -242,18 +242,18 @@
 	Script Includes can extend other Script Includes
 	AbstractAjaxProcessor is a commonly extended class used for GlideAjax, and it comes out-of-box. It provides helper functions that can call an extended Script Include from the client-side.
 	Syntax to extend another class: <classname>.prototype = Object.extendsObject(<extendingClassName>,{/* your script */}) 
-	Use Cases:
+####	Use Cases:
 		- Case 1: Create commonly used helper functions
 		- Case 2: Call a custom function via GlideAjax
-	Scheduled Jobs:
+####	Scheduled Jobs:
 	Scheduled jobs are automated pieces of work that can be performed either at a particular time, or on a recurring schedule.
-	Features:
+####	Features:
 		- Server-side JavaScript
 		- Schedule when to run
 		- **Execute Now** button for testing
 	Ability to schedule reports, scripts, charts, etc.
 	They can be scheduled once, on demand, daily/weekly/monthly, or periodically.
-	Use Case Examples:
+####	Use Case Examples:
 		- Case 1: Schedule a monthly report
 		- Case 2: Schedule a script to retire old records
 	
@@ -286,7 +286,6 @@
 
 
 ## GLIDE RECORD:
-
 	Common GlideRecord Methods:
 	query()
 	newRecord()
