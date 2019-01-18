@@ -26,7 +26,7 @@ Update sets take all the changes you did and puts them together. It records all 
 
 
 
-### 4. Name of your update set should be: IET related record (usually story number) short description (story name)
+### 4. Name of your update set should be: IET related record (usually a story number), short description (story name)
 
 
 ### 5. Submit and make current
