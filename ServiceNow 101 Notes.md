@@ -4,6 +4,7 @@
 
 	* A business rule will always be a business rule in ServiceNow, regardless of the version you’re using.
 	* Software-as-a-Service (SaaS) subscription model
+	
 ### Each subscription includes:
 	   * URL: https://<instance-name>.service-now.com
 	   * Instance data
@@ -13,12 +14,13 @@
 	* Out-of-box state
 	
 ###	Releases:
-	   ** ~10-12 month release cycle
-	   ** Feature release (new UI, new apps, new features)
-	   ** patch release (problem fixes, includes a collection of hotfixes)
-	   ** Hot fix (fix to a specific problem, implemented very quickly)
-	   ** All named after cities: Istanbul, Jakarta, Helsinki, etc.
-	* Three main instances: dev, test, and production
+	   * ~10-12 month release cycle
+	   * Feature release (new UI, new apps, new features)
+	   * patch release (problem fixes, includes a collection of hotfixes)
+	   * Hot fix (fix to a specific problem, implemented very quickly)
+	   * All named after cities: Istanbul, Jakarta, Helsinki, etc.
+	   
+	Three main instances: dev, test, and production
 
 ## DEVELOPMENT OVERVIEW:
 ###	Three main instances: dev, test, and production
@@ -28,7 +30,6 @@
 	  * Test should be as close to production as possible
 	  * Admins can clone instances, so if development instance is too different from production, a new development instance can be cloned to mirror production
 ###	Update Sets: update sets are used to record **most** customizations and configurations
- 
 	    * Used for moving changes between instances
 	    * Everything modified in ServiceNow is a modification of a table
 	    * Update sets are an XML snapshot of the last modified record
@@ -36,12 +37,14 @@
 	    * If two update sets modified the same record, and the update sets are merged, then the merged update set will contain the last modified record
 	    * When you load an update set to an instance, you can preview the update set before “committing” the update set
 	    * Previewing the update set before committing will help catch most compatibility issues and errors if they arise
+	    
 ###	Things that are captured in update sets:
 		Customizations
 		Tables & fields
 		Reports
 		Workflows
 		Forms
+		
 ###	Things that ARE NOT captured in update sets:
 		Data, new records
 		CIs
@@ -49,7 +52,6 @@
 		Users
 		Groups
 		
-	
 ###	The ServiceNow Stack (list not exhaustive):
 		Apache Tomcat web server
 		J2EE application server
@@ -63,7 +65,8 @@
 	Tables can extend other tables
 	Naming convention: My Custom Table => “u_my_custom_table”
 	Admins can create/modify tables
-	Table Relationships:
+	
+##	Table Relationships:
 	Children tables inherit attributes from the parent table
 	Dictionary overrides allow you to change the attribute in a specific child table
 	Tables can either be “one to many”, or “many to many”
@@ -116,7 +119,7 @@
 	sys_id is stored in reference field
 	Reference fields must match an exact record
 	
-###	Scripting Overview:
+##	Scripting Overview:
 	ServiceNow includes APIs called ‘Glide classes’
 	The ServiceNow Glide classes expose JavaScript APIs that enable you to conveniently work with tables using scripts. Using the Glide APIs, you can perform database operations without writing SQL queries, display UI pages, as well as define UI actions.
 	Scripting isn’t always necessary, it is best practice to avoid using scripting unless it is a necessity.
@@ -124,70 +127,78 @@
 	
 ###	Good for: creating custom integrations, client scripts, UI actions, complex transform maps, complex business rules, Service Portal widgets, and custom applications.
 
-	Client Side:
+###	Client Side:
 	Where: User’s browser
 	What: Makes request
 	
-	Access to:
+###	Access to:
 	Current form, fields & values
 	UI elements (DOM)
 	Client-side APIs
 	
-	Server Side:
+###	Server Side:
 	Where: ServiceNow data centers
 	What: Sends response
 	
-	Access to:
+###	Access to:
 	Databases
 	Server-side APIs
 	Script includes
 	
-	JavaScript:
+###	JavaScript:
 	Version: Rhino - ECMAScript 5 (ES6 and ES7 not available in ServiceNow)
 	Access to ServiceNow API, the AngularJS framework, and jQuery among a few other libraries
-	Background scripts are a location in ServiceNow where server-side code can be run on-demand, similar to a browser’s console with access to the ServiceNow API
-	Caution: background scripts should be used with caution as it could cause performance issues and result in data loss
-	ServiceNow Studio: IDE
-	Can only be used for scoped applications
-	Cannot be used on the global scope
-	Can only be used for custom applications within ServiceNow
 	
-	Important Concepts:
+###	Background scripts:
+	Background scripts are a location in ServiceNow where server-side code can be run on-demand, similar to a browser’s console with access to the ServiceNow API
+####	*Caution: background scripts should be used with caution as it could cause performance issues and result in data loss*
+###	ServiceNow Studio: IDE
+	* Can only be used for scoped applications
+	* Cannot be used on the global scope
+	* Can only be used for custom applications within ServiceNow
+	
+###	Important Concepts:
 	Naming conventions
-	ServiceNow: underscores
-	Vanilla JavaScript: camel casing
+	ServiceNow > under_scores
+	Vanilla JavaScript > camelCasing
 	Generally, if creating a new variable in a script, use the camelcase convention
 	Use underscores if referencing an existing variable in ServiceNow
 	Most fields are objects, not strings
 	There’s a difference between the display value and the field value
 
-BUSINESS RULES:
-	Business Rules only run on the server side
+## BUSINESS RULES:
+###	Business Rules only run on the server side
 	A business rule is a server-side script that runs when a record is displayed, inserted, updated or deleted, or when a table is queried.
 	Most common scripting location
 	Server-side language: Mozilla Rhine (JavaScript runtime written in Java, since ServiceNow is written in Java)
 	2,400 out-of-the-box business rules
-	Client Scripts:
+	
+###	Client Scripts:
 	Client scripts run on the client (web browser). You can use client scripts to define custom behaviors that run when events occur, such as when a form is loaded or submitted or if a cell changes value.
 	JavaScript on the client side
-	Triggered when:
+	
+####	Triggered when:
 	Field changes
 	Page loads
 	Form submissions
 	Cell edits
-	Client script ships to the browser when loaded
-	Form View:
+	
+####	Client script ships to the browser when loaded
+	
+###	Form View:
 	Table: where the script is run
 	UI Type: Desktop, Mobile (Both is best practice)
 	Type: If script runs onChange, onLoad, etc.
 	Field Name: only shows when type is onChange. When that field name changes, the script will run.
 	Script: ServiceNow API is preferable to jQuery to manipulate the DOM directly
 	If the UI type is Desktop, you have access to some older, now deprecated Glide methods.
-	UI Actions:
+	
+###	UI Actions:
 	UI Actions add buttons, links, and context menu items on forms and lists, making the UI more interactive, customizable, and specific to user activities. UI Actions contain scripts that define user functionality.
 	Server-side or client-side
 	Typically configured for form views
-	UI Policies:
+	
+###	UI Policies:
 	Client side policies
 	Primarily used on forms.
 	Offer an alternative to client scripts for dynamically changing information on a from. Use UI Policies to set custom process flows for tasks.
@@ -196,7 +207,9 @@ BUSINESS RULES:
 	Read only
 	Mandatory
 	Show/Hide
-	Script Includes:
+	
+	
+###	Script Includes:
 	Script includes are used to store JavaScript that runs on the server.
 	Create script includes to store JavaScript functions and classes for use by server scripts.
 	Each script include defines either an object class or a function.
