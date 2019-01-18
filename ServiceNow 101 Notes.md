@@ -1,16 +1,18 @@
-# UDEMY SERVICENOW DEVELOPMENT 101 COURSE NOTES
+# SERVICENOW DEVELOPMENT 101 NOTES
 
 ## GENERAL:
+
 	* A business rule will always be a business rule in ServiceNow, regardless of the version you’re using.
 	* Software-as-a-Service (SaaS) subscription model
-	* Each subscription includes:
-	   ** URL: https://<instance-name>.service-now.com
-	   ** Instance data
-	   ** Application logic
-	   ** Custom components
+### Each subscription includes:
+	   * URL: https://<instance-name>.service-now.com
+	   * Instance data
+	   * Application logic
+	   * Custom components
 	* Everything is a record in the database
 	* Out-of-box state
-	* Releases:
+	
+###	Releases:
 	   ** ~10-12 month release cycle
 	   ** Feature release (new UI, new apps, new features)
 	   ** patch release (problem fixes, includes a collection of hotfixes)
@@ -54,7 +56,7 @@
 		MySQL database
 		Mozilla Rhino JavaScript engine
  
-	Table Overview:
+###	Table Overview:
 	Over 2,000 tables in every instance
 	Each application has 1 or many tables
 	Each table has many fields
@@ -66,7 +68,7 @@
 	Dictionary overrides allow you to change the attribute in a specific child table
 	Tables can either be “one to many”, or “many to many”
  
-	Major Tables: 
+###	Major Tables: 
 	Task
 	Incident
 	Problem
@@ -88,11 +90,12 @@
 	Cmdb_ci
 	cmdb_ci_server 
 
-	Schema map:
+###	Schema map:
 	Visual schema map
 	Shows extended and related tables
 	Ability to focus on specific tables
-	GUID:
+	
+###	GUID:
 	Each record in ServiceNow is identified by a unique 32-character GUID (Globally Unique ID) called a sys_id.
 	A GUID is a 32-character hexadecimal string
 	Used all throughout the system
@@ -100,36 +103,45 @@
 	Databases, Tables & Fields (basic stuff):
 	A database contains many tables, and tables contain many fields
 	Records are stored in tables
-	Records:
+	
+###	Records:
 	Stored in a database table
 	A single entity defined by a tables fields
 	Each record has a unique sys_id
-	Reference Fields:
+	
+###	Reference Fields:
 	Reference fields store a reference to a specific row in another table, similar to foreign keys in SQL
 	Gives flexibility to create relationships between records
 	Fields with magnifying glass are Reference Fields
 	sys_id is stored in reference field
 	Reference fields must match an exact record
-	Scripting Overview:
+	
+###	Scripting Overview:
 	ServiceNow includes APIs called ‘Glide classes’
 	The ServiceNow Glide classes expose JavaScript APIs that enable you to conveniently work with tables using scripts. Using the Glide APIs, you can perform database operations without writing SQL queries, display UI pages, as well as define UI actions.
 	Scripting isn’t always necessary, it is best practice to avoid using scripting unless it is a necessity.
 	Customizing without scripting includes: UI policies, workflows, creating new tables and fields
-	Good for: creating custom integrations, client scripts, UI actions, complex transform maps, complex business rules, Service Portal widgets, and custom applications.
+	
+###	Good for: creating custom integrations, client scripts, UI actions, complex transform maps, complex business rules, Service Portal widgets, and custom applications.
+
 	Client Side:
 	Where: User’s browser
 	What: Makes request
+	
 	Access to:
 	Current form, fields & values
 	UI elements (DOM)
 	Client-side APIs
+	
 	Server Side:
 	Where: ServiceNow data centers
 	What: Sends response
+	
 	Access to:
 	Databases
 	Server-side APIs
 	Script includes
+	
 	JavaScript:
 	Version: Rhino - ECMAScript 5 (ES6 and ES7 not available in ServiceNow)
 	Access to ServiceNow API, the AngularJS framework, and jQuery among a few other libraries
@@ -139,6 +151,7 @@
 	Can only be used for scoped applications
 	Cannot be used on the global scope
 	Can only be used for custom applications within ServiceNow
+	
 	Important Concepts:
 	Naming conventions
 	ServiceNow: underscores
