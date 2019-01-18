@@ -37,6 +37,9 @@
 	    * If two update sets modified the same record, and the update sets are merged, then the merged update set will contain the last modified record
 	    * When you load an update set to an instance, you can preview the update set before “committing” the update set
 	    * Previewing the update set before committing will help catch most compatibility issues and errors if they arise
+	  
+![picture1](https://user-images.githubusercontent.com/6828733/51416504-a740d400-1b2e-11e9-8da3-0c110df5ad56.png)
+  
 	    
 ###	Things that are captured in update sets:
 	* Customizations
