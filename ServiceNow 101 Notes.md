@@ -1,6 +1,4 @@
-## UDEMY
-## SERVICENOW DEVELOPMENT 101
-## COURSE NOTES
+# UDEMY SERVICENOW DEVELOPMENT 101 COURSE NOTES
 
 ## GENERAL:
 	* A business rule will always be a business rule in ServiceNow, regardless of the version you’re using.
@@ -29,30 +27,32 @@
 	  * Admins can clone instances, so if development instance is too different from production, a new development instance can be cloned to mirror production
 ###	Update Sets: update sets are used to record **most** customizations and configurations
  
-	    Used for moving changes between instances
-	    Everything modified in ServiceNow is a modification of a table
-	    Update sets are an XML snapshot of the last modified record
-	    Update sets have versions, and you can merge 2 or more update sets into one
-	    If two update sets modified the same record, and the update sets are merged, then the merged update set will contain the last modified record
-	    When you load an update set to an instance, you can preview the update set before “committing” the update set
-	    Previewing the update set before committing will help catch most compatibility issues and errors if they arise
-	Things that are captured in update sets:
-	Customizations
-	Tables & fields
-	Reports
-	Workflows
-	Forms
-	Things that ARE NOT captured in update sets:
-	Data, new records
-	CIs
-	Schedules
-	Users
-	Groups
-	The ServiceNow Stack (list not exhaustive):
-	Apache Tomcat web server
-	J2EE application server
-	MySQL database
-	Mozilla Rhino JavaScript engine
+	    * Used for moving changes between instances
+	    * Everything modified in ServiceNow is a modification of a table
+	    * Update sets are an XML snapshot of the last modified record
+	    * Update sets have versions, and you can merge 2 or more update sets into one
+	    * If two update sets modified the same record, and the update sets are merged, then the merged update set will contain the last modified record
+	    * When you load an update set to an instance, you can preview the update set before “committing” the update set
+	    * Previewing the update set before committing will help catch most compatibility issues and errors if they arise
+###	Things that are captured in update sets:
+		Customizations
+		Tables & fields
+		Reports
+		Workflows
+		Forms
+###	Things that ARE NOT captured in update sets:
+		Data, new records
+		CIs
+		Schedules
+		Users
+		Groups
+		
+	
+###	The ServiceNow Stack (list not exhaustive):
+		Apache Tomcat web server
+		J2EE application server
+		MySQL database
+		Mozilla Rhino JavaScript engine
  
 	Table Overview:
 	Over 2,000 tables in every instance
