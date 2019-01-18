@@ -76,6 +76,9 @@
 	* Children tables inherit attributes from the parent table
 	* Dictionary overrides allow you to change the attribute in a specific child table
 	* Tables can either be “one to many”, or “many to many”
+	
+![picture3](https://user-images.githubusercontent.com/6828733/51416783-d7d53d80-1b2f-11e9-9af5-58bbf1de5a54.png)
+
  
 ###	Major Tables: 
 	* Task
