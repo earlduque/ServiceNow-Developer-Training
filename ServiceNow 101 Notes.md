@@ -39,115 +39,116 @@
 	    * Previewing the update set before committing will help catch most compatibility issues and errors if they arise
 	    
 ###	Things that are captured in update sets:
-		Customizations
-		Tables & fields
-		Reports
-		Workflows
-		Forms
+	* Customizations
+	* Tables & fields
+	* Reports
+	* Workflows
+	* Forms
 		
 ###	Things that ARE NOT captured in update sets:
-		Data, new records
-		CIs
-		Schedules
-		Users
-		Groups
+	* Data, new records
+	* CIs
+	* Schedules
+	* Users
+	* Groups
 		
 ###	The ServiceNow Stack (list not exhaustive):
-		Apache Tomcat web server
-		J2EE application server
-		MySQL database
-		Mozilla Rhino JavaScript engine
+	* Apache Tomcat web server
+	* J2EE application server
+	* MySQL database
+	* Mozilla Rhino JavaScript engine
  
 ###	Table Overview:
-	Over 2,000 tables in every instance
-	Each application has 1 or many tables
-	Each table has many fields
-	Tables can extend other tables
-	Naming convention: My Custom Table => “u_my_custom_table”
-	Admins can create/modify tables
+	* Over 2,000 tables in every instance
+	* Each application has 1 or many tables
+	* Each table has many fields
+	* Tables can extend other tables
+	* Naming convention: My Custom Table => “u_my_custom_table”
+	* Admins can create/modify tables
 	
 ##	Table Relationships:
-	Children tables inherit attributes from the parent table
-	Dictionary overrides allow you to change the attribute in a specific child table
-	Tables can either be “one to many”, or “many to many”
+	* Children tables inherit attributes from the parent table
+	* Dictionary overrides allow you to change the attribute in a specific child table
+	* Tables can either be “one to many”, or “many to many”
  
 ###	Major Tables: 
-	Task
-	Incident
-	Problem
-	Change_request
-	Change_task
-	Sys_user
-	Sys_user_group
-	Sys_user_role
-	Cmn_location
-	Core_company
-	Kb_knowledge
-	Kb_category
-	Kb_knowledge_base
-	Sc_catalog
-	Sc_cat_item
-	Sc_task
-	Sc_request
-	Sc_req_item
-	Cmdb_ci
-	cmdb_ci_server 
+	* Task
+	* Incident
+	* Problem
+	* Change_request
+	* Change_task
+	* Sys_user
+	* Sys_user_group
+	* Sys_user_role
+	* Cmn_location
+	* Core_company
+	* Kb_knowledge
+	* Kb_category
+	* Kb_knowledge_base
+	* Sc_catalog
+	* Sc_cat_item
+	* Sc_task
+	* Sc_request
+	* Sc_req_item
+	* Cmdb_ci
+	* Cmdb_ci_server 
 
 ###	Schema map:
-	Visual schema map
-	Shows extended and related tables
-	Ability to focus on specific tables
+	* Visual schema map
+	* Shows extended and related tables
+	* Ability to focus on specific tables
 	
 ###	GUID:
-	Each record in ServiceNow is identified by a unique 32-character GUID (Globally Unique ID) called a sys_id.
-	A GUID is a 32-character hexadecimal string
-	Used all throughout the system
-	Commonly paired with a table name to locate a specific record
-	Databases, Tables & Fields (basic stuff):
-	A database contains many tables, and tables contain many fields
-	Records are stored in tables
+	* Each record in ServiceNow is identified by a unique 32-character GUID (Globally Unique ID) called a sys_id.
+	* A GUID is a 32-character hexadecimal string
+	* Used all throughout the system
+	* Commonly paired with a table name to locate a specific record
+	* Databases, Tables & Fields (basic stuff):
+	* A database contains many tables, and tables contain many fields
+	* Records are stored in tables
 	
 ###	Records:
-	Stored in a database table
-	A single entity defined by a tables fields
-	Each record has a unique sys_id
+	* Stored in a database table
+	* A single entity defined by a tables fields
+	* Each record has a unique sys_id
 	
 ###	Reference Fields:
-	Reference fields store a reference to a specific row in another table, similar to foreign keys in SQL
-	Gives flexibility to create relationships between records
-	Fields with magnifying glass are Reference Fields
-	sys_id is stored in reference field
-	Reference fields must match an exact record
+	* Reference fields store a reference to a specific row in another table, similar to foreign keys in SQL
+	* Gives flexibility to create relationships between records
+	* Fields with magnifying glass are Reference Fields
+	* sys_id is stored in reference field
+	* Reference fields must match an exact record
 	
 ##	Scripting Overview:
-	ServiceNow includes APIs called ‘Glide classes’
-	The ServiceNow Glide classes expose JavaScript APIs that enable you to conveniently work with tables using scripts. Using the Glide APIs, you can perform database operations without writing SQL queries, display UI pages, as well as define UI actions.
-	Scripting isn’t always necessary, it is best practice to avoid using scripting unless it is a necessity.
-	Customizing without scripting includes: UI policies, workflows, creating new tables and fields
+	* ServiceNow includes APIs called ‘Glide classes’
+	* The ServiceNow Glide classes expose JavaScript APIs that enable you to conveniently work with tables using scripts. Using the Glide APIs, you can perform database operations without writing SQL queries, display UI pages, as well as define UI actions.
+	* Scripting isn’t always necessary, it is best practice to avoid using scripting unless it is a necessity.
+	* Customizing without scripting includes: UI policies, workflows, creating new tables and fields
 	
-###	Good for: creating custom integrations, client scripts, UI actions, complex transform maps, complex business rules, Service Portal widgets, and custom applications.
+###	Good for: 
+	* Creating custom integrations, client scripts, UI actions, complex transform maps, complex business rules, Service Portal widgets, and custom applications.
 
 ###	Client Side:
-	Where: User’s browser
-	What: Makes request
+	* Where: User’s browser
+	* What: Makes request
 	
 ###	Access to:
-	Current form, fields & values
-	UI elements (DOM)
-	Client-side APIs
+	* Current form, fields & values
+	* UI elements (DOM)
+	* Client-side APIs
 	
 ###	Server Side:
-	Where: ServiceNow data centers
-	What: Sends response
+	* Where: ServiceNow data centers
+	* What: Sends response
 	
 ###	Access to:
-	Databases
-	Server-side APIs
-	Script includes
+	* Databases
+	* Server-side APIs
+	* Script includes
 	
 ###	JavaScript:
-	Version: Rhino - ECMAScript 5 (ES6 and ES7 not available in ServiceNow)
-	Access to ServiceNow API, the AngularJS framework, and jQuery among a few other libraries
+	* Version: Rhino - ECMAScript 5 (ES6 and ES7 not available in ServiceNow)
+	* Access to ServiceNow API, the AngularJS framework, and jQuery among a few other libraries
 	
 ###	Background scripts:
 	Background scripts are a location in ServiceNow where server-side code can be run on-demand, similar to a browser’s console with access to the ServiceNow API
@@ -221,7 +222,7 @@
 	Unique since they can be called from anywhere (Client callable option)
 	2 types:
 	Classless
-	Script Include name => function name
+	Script Include name **=>** function name
 	Server-side only
 	Class
 	Typically extend another class
@@ -233,32 +234,33 @@
 	AbstractAjaxProcessor is a commonly extended class used for GlideAjax, and it comes out-of-box. It provides helper functions that can call an extended Script Include from the client-side.
 	Syntax to extend another class: <classname>.prototype = Object.extendsObject(<extendingClassName>,{/* your script */}) 
 	Use Cases:
-	Case 1: Create commonly used helper functions
-	Case 2: Call a custom function via GlideAjax
+		- Case 1: Create commonly used helper functions
+		- Case 2: Call a custom function via GlideAjax
 	Scheduled Jobs:
 	Scheduled jobs are automated pieces of work that can be performed either at a particular time, or on a recurring schedule.
 	Features:
-	Server-side JavaScript
-	Schedule when to run
-	Execute Now button for testing
+		- Server-side JavaScript
+		- Schedule when to run
+		- **Execute Now** button for testing
 	Ability to schedule reports, scripts, charts, etc.
 	They can be scheduled once, on demand, daily/weekly/monthly, or periodically.
 	Use Case Examples:
-	Case 1: Schedule a monthly report
-	Case 2: Schedule a script to retire old records
-	Workflow Editor:
+		- Case 1: Schedule a monthly report
+		- Case 2: Schedule a script to retire old records
+	
+###	Workflow Editor:
 	The workflow editor is an interface for creating and modifying workflows by arranging and connecting activities to drive processes. 
-	Features:
-	Server-side JavaScript
-	Automated sequence of activities
-	Many locations to script a workflow
-	Different scopes
-	Versioning and checkout/publish features
-	Workflow contexts are created when workflow conditions evaluate to true
-	Versioning: allows a user to “checkout” an existing workflow, essentially creating a new, working version, and can be edited without affecting the currently published workflow in the system
-	Scripting in Workflows:
-	Only use scripts if out-of-box features aren’t enough.
-	Activities that support scripting:
+####	Features:
+		- Server-side JavaScript
+		- Automated sequence of activities
+		- Many locations to script a workflow
+		- Different scopes
+		- Versioning and checkout/publish features
+####	Workflow contexts are created when workflow conditions evaluate to true
+####	Versioning: allows a user to “checkout” an existing workflow, essentially creating a new, working version, and can be edited without affecting the currently published workflow in the system
+####	Scripting in Workflows:
+		Only use scripts if out-of-box features aren’t enough.
+####	Activities that support scripting:
 	Approval activities
 	Run Script activity
 	If, Switch, and Wait for condition activities
@@ -274,7 +276,7 @@
 	Workflow activities
 
 
-GLIDE RECORD:
+## GLIDE RECORD:
 
 	Common GlideRecord Methods:
 	query()
