@@ -97,5 +97,5 @@ This function utilizes *dropdown*, *dropdown-menu*, and *dropdown-item* to make 
 Bootstrap is a versatile tool kit that can create more advanced and dynamic functionality in HTML/CSS simply. A few more uses of Bootstrap includes: alerts, loading spinners, images, cards, badges, and forms. Hopefully you now have an understanding of how to Bootstrap can be used. With this knowledge, I encourage you to explore a few of the references below and see how else Bootstrap can be implemented.
 
 ## Referenes
-https://hackerthemes.com/bootstrap-cheatsheet/#text-muted
+https://hackerthemes.com/bootstrap-cheatsheet
 https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp
