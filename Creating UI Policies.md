@@ -1,6 +1,14 @@
 
 # UI Policies in ServiceNow
 
+What is a UI Policy?<br>
+What does a UI Policy Do?<br>
+Create a new UI Policy<br>
+Just a Reminder<br>
+UI Policies and Catalog Items<br>
+Tutorial ~~~Things to Try~~~
+
+
 ## What is a UI Policy?
 A UI policy stands for "user interface policy". A UI policy is a rule that controls the appearance and other characteristics on a field in a form.
 
@@ -13,7 +21,7 @@ Basic UI Policies don't require the use of scripting, but for more advanced or c
 
 While client scripts can be used to perform all these actions, for faster loading times UI Policies should be used whenever possible.
 
-*Note: ui_policy_admin role is required to make these changes*
+*Note: ```ui_policy_admin``` role is required to make these changes*
 
 ## To create a new UI Policy
 
@@ -53,6 +61,8 @@ In order for the UI policy to work as intended, it must be set to an 'Active' st
 * Requiring certain fields to be mandatory
 * Dynamically hiding/Showing certain fields depending on the selections the user makes
 * Making a field mandatory after a user selects an option
+
+
 
 ## Videos and Related Content
 [ServiceNow Training Part - 10 (Client Script & UI Policy)](https://www.youtube.com/watch?v=1GIdGNuNZRI) <br>
