@@ -1,4 +1,11 @@
 ## Client Scripts in ServiceNow
+
+Overview<br>
+GlideForm API<br>
+Types of Scripts<br>
+Tutorial
+
+
 ### Overview
 ____
 Client scripts are used to customize features using JavaScript <br>
@@ -26,7 +33,7 @@ powerful way to tailor a form in real time
 *Note: to view all Client Scripts in your ServiceNow instance, head to **System Definition > Client Scripts** or type **"Client Scripts"** in the navigator*
 
 ~~a. To see client scripts for a specific form, go to incidents, click on a specific form, click on the hamburger menu on the upper left corner of the page, click **configure** and then select **client scripts**~~
-
+###Types of Scripts
 There are a few different kinds of scripts:
 <img width="339" alt="screen shot 2019-01-25 at 1 26 29 pm" src="https://user-images.githubusercontent.com/6828733/51774718-22166b80-20a8-11e9-8e1f-37461dc9ee79.png">
 
@@ -77,16 +84,40 @@ example:
 ```javascript
 function onLoad() {
     if (g_user.hasRole('itil_admin')) {
-        // do something
         return;
     }
 }
 ```
 
-```g_record``` Glide Record methods make calls to the database on the server without having to use mySQL
+```g_record``` Glide Record methods make calls to the database on the server without having to use mySQL and uses the ```gr``` object.
 
-example:<br>
+example:
 ```javascript
-var gr = new GlideRecord(g_form.getTableName)
+function onSubmit() {
+    var gr = new GlideRecord(g_form.getTableName)
+    if(!gr.get(g_form.getUniqueValue())){
+        return;
+    }
+}
+```
+The GlideAjax API sends work to the server using a script include with the ```ajax``` object.
+
+example:
+```javascript
+function onChange(){
+    if (newValue ==='') {
+      return;
+    }
+    var ajax = new GlideAjax('AssessmentUtilsAjax');
+    ajax.addParam('sysparm_metricJ_type', String(newValue));
+    ajax.addParam('sysparm_name', 'GetMetricTypeTable'); 
+    ajax.getXML(function(response){
+        if(response){
+            var table = response.responseXML.documentElement.getAttribute("answer");
+            g_form.setValue('table', 'table');
+        }
+    })
+}
 ```
 
+###
