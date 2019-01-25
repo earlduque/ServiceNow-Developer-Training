@@ -1,7 +1,10 @@
 ## Client Scripts in ServiceNow
 ### Overview
-Client scripts are used to customize features using JS <br>
+____
+Client scripts are used to customize features using JavaScript <br>
+
 You can use scripts to run on server as well as client browsers <br>
+
 Since servers have direct access to the database server scripts are used to modify records in the DB and generate events
 
 Since the client has access to forms client scripts are used to tailor forms to the current user and conditions
@@ -60,6 +63,25 @@ Here's a list of **g_form** methods you can use which allow you to do the follow
 * Form actions: ```addInfoMessage()```, ```clearMessages()```
 
 ```g_user``` Glide User methods provide information about the current user through the global **g_user** object
+
+| ```g_user``` Methods  |            Properties           |
+|-----------------------|---------------------------------|
+|```getClientData()```  |```firstName```                  |
+|```getFullName()```    |```lastName```                   |
+|```hasRole()```        |```userID```                     |
+|```hasRoleExactly()``` |```userName```                   |
+|```hasRoleFromList()```|                                 |
+|```hasRoles()```       |                                 |
+
+example:
+```javascript
+function onLoad() {
+    if (g_user.hasRole('itil_admin')) {
+        // do something
+        return;
+    }
+}
+```
 
 ```g_record``` Glide Record methods make calls to the database on the server without having to use mySQL
 
