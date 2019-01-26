@@ -117,7 +117,22 @@ function onChange(){
             g_form.setValue('table', 'table');
         }
     })
+    
+    
+
 }
 ```
 
-###
+###Tutorial
+______
+
+1. Make sure you use either your **Sand** or **Learn** environment before continuing onto the next step.<br>
+2. In your navigation bar, search for "Maintain Items" and head to that page.
+3. Create a new Catalog Item called "Dating Application" (you can name it something else if you'd like)
+4. Fill out the short description and hit 'Submit'
+5. Create two new variables to start: Full Name (type: Single Line Text) and Birthdate (type: Date)
+6. After creating your new variables, scroll down to the bottom of the page and select **Catalog Client Scripts**
+7. Select **New**
+8. We're going to create an ```onChange()``` client script to verify that the user filling out the form selects a date in the past. So on the upper right side of the form, select ```onChange()``` under the **Type** field.
+9. Select the birthdate **variable** you created earlier
+10.
