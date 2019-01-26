@@ -124,7 +124,7 @@ function onChange(){
 ```
 
 ###Tutorial
-______
+
 
 1. Make sure you use either your **Sand** or **Learn** environment before continuing onto the next step.<br>
 2. In your navigation bar, search for "Maintain Items" and head to that page.
