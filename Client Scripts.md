@@ -143,7 +143,7 @@ function onChange(){
 <br>**9.** We're going to create an ```onChange()``` client script to verify that the user filling out the form selects a date in the past. So on the upper right side of the form, select ```onChange()``` under the **Type** field.
 <br>**10.** Select the birthdate **variable** you created earlier <br>
 <img width="425" alt="screen shot 2019-01-30 at 12 06 14 pm" src="https://user-images.githubusercontent.com/6828733/52009792-a2faac00-2488-11e9-9069-7a13baf425fd.png">
-<br>**11.** Make sure 
+<br>**11.** Make sure that the checkbox for **Applies to a Catalog Item View** is checked.
 <br>**12.** After ```onChange()``` has been selected, the **Script** field should automatically be filled with a generic ```onChange()``` function. If not, copy and paste the following code:
 
 ```javascript
