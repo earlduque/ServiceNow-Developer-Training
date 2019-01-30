@@ -3,12 +3,10 @@
 **[Overview](#overview)**<br>
 **[Types of Scripts](#types-of-scripts)**<br>
 **[GlideForm API](#glideform-api)**<br>
-<<<<<<< HEAD
 **[Tutorial](#tutorial)**<br>
 **[Other Things to Try](#other-things-to-try)**
-=======
 **[Tutorial](#tutorial)**
->>>>>>> d8ddaede16a2bdc261dfeab14900fba4e7a00777
+
 
 
 ### Overview
