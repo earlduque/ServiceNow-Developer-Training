@@ -29,9 +29,9 @@ Some of the things that client scripts can do include:
 * Validate form data
 * Modify choice list options
 * Hide/Show fields or sections
+* Modify options in choice list depending on a users role 
+* Display messages based on the value in another field
 
-Modify options in choice list depending on users role display messages based on the value in a field
-powerful way to tailor a form in real time
 
 *Note: to view all Client Scripts in your ServiceNow instance, head to **System Definition > Client Scripts** or type **"Client Scripts"** in the navigator*
 
@@ -53,13 +53,9 @@ Client Scripts interact with the system through a set of APIs (*Application Prog
 <br>
 
 
-<<<<<<< HEAD
-###GlideForm API
-=======
 ### GlideForm API
->>>>>>> d8ddaede16a2bdc261dfeab14900fba4e7a00777
-Client scripts configure forms and their fields.values through an api named GlideForm 
-You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
+
+Client scripts configure forms and their fields/values through an API named GlideForm. You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
 change choices in a list
 
 example:
