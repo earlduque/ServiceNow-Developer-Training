@@ -1,9 +1,9 @@
 ## Client Scripts in ServiceNow
 
-Overview<br>
-GlideForm API<br>
-Types of Scripts<br>
-Tutorial
+**[Overview](#overview)**<br>
+**[Types of Scripts](#types-of-scripts)**<br>
+**[GlideForm API](#glideform-api)**<br>
+**[Tutorial](#tutorial)**
 
 
 ### Overview
@@ -33,7 +33,7 @@ powerful way to tailor a form in real time
 *Note: to view all Client Scripts in your ServiceNow instance, head to **System Definition > Client Scripts** or type **"Client Scripts"** in the navigator*
 
 
-###Types of Scripts
+### Types of Scripts
 There are a few different kinds of scripts:
 <img width="339" alt="screen shot 2019-01-25 at 1 26 29 pm" src="https://user-images.githubusercontent.com/6828733/51774718-22166b80-20a8-11e9-8e1f-37461dc9ee79.png">
 
@@ -50,7 +50,7 @@ Client Scripts interact with the system through a set of APIs (*Application Prog
 <br>
 
 
-####GlideForm API
+#### GlideForm API
 Client scripts configure forms and their fields.values through an api named GlideForm 
 You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
 change choices in a list
