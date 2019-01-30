@@ -5,7 +5,7 @@
 **[GlideForm API](#glideform-api)**<br>
 **[Tutorial](#tutorial)**<br>
 **[Other Things to Try](#other-things-to-try)**
-**[Tutorial](#tutorial)**
+
 
 
 
