@@ -50,14 +50,12 @@ There are a few different kinds of scripts:
 
 * an ```onCellEdit()``` is similar to an ```onChange()``` function, except the script runs when a user changes a field on a list rather than a form. (But we don't really need to worry about this one)
 
-Client Scripts interact with the system through a set of APIs (*Application Programming Interface*) 
-
 <br>
 
 
 ### GlideForm API
 
-Client scripts configure forms and their fields/values through an API named GlideForm. You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
+Client scripts configure forms and their fields/values through an API (*Application Programming Interface*) called GlideForm. You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
 change choices in a list
 
 example:
@@ -66,7 +64,7 @@ function onLoad() {
     g_form.removeOption('priority', '1');
 }
 ```
-Here's a list of **g_form** methods you can use which allow you to do the following:
+Here's a list of ```g_form``` methods you can use which allow you to do the following:
 * Draw attention: ```flash()```, ```showFieldMsg()```
 * Get information: ```getValue()```, ```getReference()```
 * Change a field value: ```setValue()```, ```clearValue()```
