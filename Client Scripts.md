@@ -1,9 +1,10 @@
-## Client Scripts in ServiceNow
-
-Overview<br>
-GlideForm API<br>
-Types of Scripts<br>
-Tutorial
+# Client Scripts in ServiceNow
+## Table of Contents 
+**[Overview](#overview)**<br>
+**[Types of Scripts](#types-of-scripts)**<br>
+**[GlideForm API](#glideform-api)**<br>
+**[Tutorial](#tutorial)**<br>
+**[Other Things to Try](#other-things-to-try)**
 
 
 ### Overview
@@ -50,7 +51,7 @@ Client Scripts interact with the system through a set of APIs (*Application Prog
 <br>
 
 
-####GlideForm API
+###GlideForm API
 Client scripts configure forms and their fields.values through an api named GlideForm 
 You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
 change choices in a list
@@ -184,7 +185,7 @@ function onChange(control, oldValue, newValue, isLoading) {
 <br> 
 ##### Congratulations! You've just created your first client script.
 
-##### Other things to try:
+#### Other things to try:
 * Adding a few more fields and creating an ``onLoad()`` that autofills the user and email fields.
 * Instead of having a date validation ``onChange()`` script, make it so that the date is validated until the form is submitted using an ``onSubmit`` script.
 * Use ``onSubmit()`` to produce a pop up window asking if the user is sure that they want to submit the form. Only submit if the user selects "Yes".
