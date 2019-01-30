@@ -47,7 +47,7 @@ There are a few different kinds of scripts:
 
 * an ```onSubmit()``` script which runs when the user submits the form, which is useful for validating values that the user entered.
 <img width="764" alt="screen shot 2019-01-25 at 1 24 28 pm" src="https://user-images.githubusercontent.com/6828733/51774760-496d3880-20a8-11e9-839c-3c1a28ae6292.png">
-* an ``onCellEdit()`` is similar to an ```onChange()``` function, except the script runs when a user changes a field on a list rather than a form. (But we don't really need to worry about this one)
+* an ```onCellEdit()``` is similar to an ```onChange()``` function, except the script runs when a user changes a field on a list rather than a form. (But we don't really need to worry about this one)
 
 Client Scripts interact with the system through a set of APIs (*Application Programming Interface*) 
 
