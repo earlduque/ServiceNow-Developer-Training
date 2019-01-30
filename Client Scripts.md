@@ -191,7 +191,7 @@ function onChange(control, oldValue, newValue, isLoading) {
 <br> 
 ##### Congratulations! You've just created your first client script.
 
-#### Other things to try:
+### Other things to try:
 * Adding a few more fields and creating an ``onLoad()`` that autofills the user and email fields.
 * Instead of having a date validation ``onChange()`` script, make it so that the date is validated until the form is submitted using an ``onSubmit`` script.
 * Use ``onSubmit()`` to produce a pop up window asking if the user is sure that they want to submit the form. Only submit if the user selects "Yes".
