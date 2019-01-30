@@ -41,12 +41,13 @@ There are a few different kinds of scripts:
 
 <img width="339" alt="screen shot 2019-01-25 at 1 26 29 pm" src="https://user-images.githubusercontent.com/6828733/51774718-22166b80-20a8-11e9-8e1f-37461dc9ee79.png">
 
-* an ```onLoad()```script which controls how the form *first* appears to the user; in other words, how the page *loads*.
+* an ```onLoad()``` script which controls how the form *first* appears to the user; in other words, how the page *loads*.
 * an ```onChange()``` scripts which changes the form when the user changes a field, which is useful for automatically setting the value of a field, or displaying a message depending on the value(s) a user enters 
 <img width="518" alt="screen shot 2019-01-25 at 1 24 22 pm" src="https://user-images.githubusercontent.com/6828733/51774738-35c1d200-20a8-11e9-864d-5ccc8fa24676.png">
 
 * an ```onSubmit()``` script which runs when the user submits the form, which is useful for validating values that the user entered.
 <img width="764" alt="screen shot 2019-01-25 at 1 24 28 pm" src="https://user-images.githubusercontent.com/6828733/51774760-496d3880-20a8-11e9-839c-3c1a28ae6292.png">
+
 * an ```onCellEdit()``` is similar to an ```onChange()``` function, except the script runs when a user changes a field on a list rather than a form. (But we don't really need to worry about this one)
 
 Client Scripts interact with the system through a set of APIs (*Application Programming Interface*) 
