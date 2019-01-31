@@ -220,26 +220,44 @@ to perform fine-grained selections. CSS has several ways to select elements
 based on how they are related to one another. Some common relationships are
 expressed as follows (A and B are any selector from above):
 
-| Name                  | Syntax | Select                                      |
-| --------------------- | ------ | ------------------------------------------- |
-| Group of selectors    | A, B   | Any element that matches A and/or B         |
-| Descendant combinator | A B    | Any element matching B that is a child of A |
+| Name                        | Syntax | Select                                                                                                                             |
+| --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Group of selectors          | A, B   | Any element that matches A and/or B                                                                                                |
+| Descendant combinator       | A B    | Any element matching B that is a **descendant** (child, child of child, etc.) of A                                                 |
+| Child combinator            | A > B  | Any element matching B that is a **direct** child of A                                                                             |
+| Adjacent sibling combinator | A + B  | Any element matching B that is the next **sibling** of an element matching A (the next child of the same parent)                   |
+| General sibling combinator  | A ~ B  | Any element matching B that is one of the next **siblings** of an element matching A (one of the next children of the same parent) |
 
-Add these to your CSS:
+Let's go through these one-by-one to see how they work.
+
+#### Groups of Selectors
+
+You can write groups of selectors separated by commas to apply the same rule to multiple sets of selected elements at once.
+
+Add this to your CSS:
 
 ```css
 ul,
-li {
-    text-decoration: underline;
-}
-
-div p {
-    font-weight: bold;
+ol {
+    color: purple;
 }
 ```
 
-Save your widget. All `ul` and `li` elements will have underlines, and all `p`
-elements inside of `div` elements will be bold.
+Save your widget and notice how both the bulleted and numbered lists turned purple.
+
+#### Descendent Combinator
+
+This selector combines two selectors such that elements matched by the second selector are selected if they have an ancestor element matching the first selector.
+
+Add this to your CSS:
+
+```css
+ul li {
+    text-decoration: underline;
+}
+```
+
+This statement will make all `li` elements that are descendants of `ul` elements be underlined. Save your widget and notice how the Shopping List is underlined, but the To Do List is not.
 
 ### Advanced Declarations
 
