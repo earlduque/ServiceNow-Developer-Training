@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0e04bce-7280-49e2-b25f-2089f26433df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client Scripts.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GlideAjax.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client Scripts.md" beforeDir="false" afterPath="$PROJECT_DIR$/Client Scripts.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,9 +22,19 @@
         <entry file="file://$PROJECT_DIR$/Creating UI Policies.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="720">
-                <caret line="60" column="102" selection-start-line="60" selection-start-column="102" selection-end-line="60" selection-end-column="102" />
+              <first_editor relative-caret-position="555">
+                <caret line="63" selection-start-line="63" selection-end-line="63" />
               </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS Introduction.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -31,8 +44,8 @@
         <entry file="file://$PROJECT_DIR$/Client Scripts.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="435">
-                <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+              <first_editor relative-caret-position="722">
+                <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
               </first_editor>
               <second_editor />
             </state>
@@ -118,7 +131,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14306000" />
+    <option name="totallyTimeSpent" value="14580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -185,8 +198,8 @@
     <entry file="file://$PROJECT_DIR$/Creating UI Policies.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="720">
-            <caret line="60" column="102" selection-start-line="60" selection-start-column="102" selection-end-line="60" selection-end-column="102" />
+          <first_editor relative-caret-position="555">
+            <caret line="63" selection-start-line="63" selection-end-line="63" />
           </first_editor>
           <second_editor />
         </state>
@@ -195,8 +208,8 @@
     <entry file="file://$PROJECT_DIR$/Client Scripts.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="435">
-            <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <first_editor relative-caret-position="722">
+            <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
           </first_editor>
           <second_editor />
         </state>

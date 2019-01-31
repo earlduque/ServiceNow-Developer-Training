@@ -11,15 +11,12 @@
 
 ### Overview
 ____
-Client scripts are used to customize features using JavaScript <br>
-
-You can use scripts to run on server as well as client browsers <br>
-
-Since servers have direct access to the database server scripts are used to modify records in the DB and generate events
-
-Since the client has access to forms client scripts are used to tailor forms to the current user and conditions
-
-Client Scripts can be used to configure forms, form fields and form values in real time while user is using form
+What are Client Scripts?
+* Client scripts are used to customize features using JavaScript
+* You can use scripts to run on server as well as client browsers
+* Since servers have direct access to the database server scripts are used to modify records in the DB and generate events
+* Since the client has access to forms, client scripts are used to tailor forms to the current user and conditions
+* Client Scripts can be used to configure forms, form fields, and form values in real time while user is using the form
 
 Some of the things that client scripts can do include:
 * Place the cursor in a form field on form load
@@ -50,14 +47,12 @@ There are a few different kinds of scripts:
 
 * an ```onCellEdit()``` is similar to an ```onChange()``` function, except the script runs when a user changes a field on a list rather than a form. (But we don't really need to worry about this one)
 
-Client Scripts interact with the system through a set of APIs (*Application Programming Interface*) 
-
 <br>
 
 
 ### GlideForm API
 
-Client scripts configure forms and their fields/values through an API named GlideForm. You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
+Client scripts configure forms and their fields/values through an API (*Application Programming Interface*) called GlideForm. You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
 change choices in a list
 
 example:
@@ -66,7 +61,7 @@ function onLoad() {
     g_form.removeOption('priority', '1');
 }
 ```
-Here's a list of **g_form** methods you can use which allow you to do the following:
+Here's a list of ```g_form``` methods you can use which allow you to do the following:
 * Draw attention: ```flash()```, ```showFieldMsg()```
 * Get information: ```getValue()```, ```getReference()```
 * Change a field value: ```setValue()```, ```clearValue()```
@@ -122,9 +117,6 @@ function onChange(){
             g_form.setValue('table', 'table');
         }
     })
-    
-    
-
 }
 ```
 
@@ -145,7 +137,7 @@ function onChange(){
 <br>**9.** We're going to create an ```onChange()``` client script to verify that the user filling out the form selects a date in the past. So on the upper right side of the form, select ```onChange()``` under the **Type** field.
 <br>**10.** Select the birthdate **variable** you created earlier <br>
 <img width="425" alt="screen shot 2019-01-30 at 12 06 14 pm" src="https://user-images.githubusercontent.com/6828733/52009792-a2faac00-2488-11e9-9069-7a13baf425fd.png">
-<br>**11.** Make sure 
+<br>**11.** Make sure that the checkbox for **Applies to a Catalog Item View** is checked.
 <br>**12.** After ```onChange()``` has been selected, the **Script** field should automatically be filled with a generic ```onChange()``` function. If not, copy and paste the following code:
 
 ```javascript
