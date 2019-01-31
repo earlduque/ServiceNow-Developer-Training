@@ -37,8 +37,7 @@ Refer to ServiceNow [documentation](https://docs.servicenow.com/bundle/london-pl
 **4.** Select the table to be affected by the UI Policy.<br>
 **5.** Click submit.<br> 
 
-#### Just a reminder that
-In order for the UI policy to work as intended: 
+*Just a reminder* that n order for the UI policy to work as intended: 
 * It must be set to an 'Active' state
 * The items in the Conditions field must evaluate to true
 * The field specified in the UI policy action is present on the specified form
