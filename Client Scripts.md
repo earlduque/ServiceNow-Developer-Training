@@ -1,7 +1,7 @@
 # Client Scripts in ServiceNow
 ## Table of Contents 
 **[Overview](#overview)**<br>
-**[Types of Scripts](#types-of-scripts)**<br>
+**[Script Types](#script-types)**<br>
 **[GlideForm API](#glideform-api)**<br>
 **[Tutorial](#tutorial)**<br>
 **[Other Things to Try](#other-things-to-try)**
@@ -31,7 +31,7 @@ ____
 *Note: to view all Client Scripts in your ServiceNow instance, head to **System Definition > Client Scripts** or type **"Client Scripts"** in the navigator*
 
 
-### Types of Scripts
+### Script Types
 There are a few different kinds of scripts:
 
 <img width="339" alt="screen shot 2019-01-25 at 1 26 29 pm" src="https://user-images.githubusercontent.com/6828733/51774718-22166b80-20a8-11e9-8e1f-37461dc9ee79.png">
