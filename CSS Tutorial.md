@@ -518,3 +518,29 @@ answer:
 
 -   https://developer.mozilla.org/en-US/docs/Web/CSS
 -   https://css-tricks.com/
+
+## Best Practices
+
+1. Make it Readable
+
+Good readability of your CSS makes it easier to maintain.
+
+You could write your CSS like this, with everything on one line:
+
+```css
+/* Ignore the second comment. I use the Prettier extension which automatically formats code, but I don't want this code to be formatted to show how unreadable / ugly it is */
+/* prettier-ignore */
+.example {
+    background: red; padding: 2em; border: 1px solid black;
+}
+```
+
+However, this is hard to read. The best practice is to write each style on its own line like so:
+
+```css
+.example {
+    background: red;
+    padding: 2em;
+    border: 1px solid black;
+}
+```
