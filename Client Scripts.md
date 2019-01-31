@@ -45,7 +45,7 @@ There are a few different kinds of scripts:
 
 * an ```onCellEdit()``` is similar to an ```onChange()``` function, except the script runs when a user changes a field on a list rather than a form. (But we don't really need to worry about this one)
 
-<br>
+
 
 
 ### GlideForm API
@@ -177,7 +177,7 @@ function onChange(control, oldValue, newValue, isLoading) {
 <br>**21.** Fill out the **About Me** form and try to choose a future date as your birthday.
 <br>**22.** You should see an alert window tell you that your choice is invalid. When you close the alert message, you should see that the **Birthdate** field has been set to empty.
 <br> 
-##### Congratulations! You've just created your first client script.
+#### Congratulations! You've just created your first client script.
 
 ### Other things to try:
 * Adding a few more fields and creating an ``onLoad()`` that autofills the user and email fields.
