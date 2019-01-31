@@ -9,14 +9,14 @@
 
 ### Overview
 ____
-What are Client Scripts?
+**What are Client Scripts?**
 * Client scripts are used to customize features using JavaScript
 * You can use scripts to run on server as well as client browsers
 * Since servers have direct access to the database server scripts are used to modify records in the DB and generate events
 * Since the client has access to forms, client scripts are used to tailor forms to the current user and conditions
 * Client Scripts can be used to configure forms, form fields, and form values in real time while user is using the form
 
-Some of the things that client scripts can do include:
+**Some of the things that client scripts can do include:**
 * Place the cursor in a form field on form load
 * Generate alerts, confirmations, and messages
 * Populate a form field in response to another field's value
@@ -59,7 +59,7 @@ function onLoad() {
     g_form.removeOption('priority', '1');
 }
 ```
-Here's a list of ```g_form``` methods you can use which allow you to do the following:
+**Here's a list of ```g_form``` methods you can use which allow you to do the following:**
 * Draw attention: ```flash()```, ```showFieldMsg()```
 * Get information: ```getValue()```, ```getReference()```
 * Change a field value: ```setValue()```, ```clearValue()```
