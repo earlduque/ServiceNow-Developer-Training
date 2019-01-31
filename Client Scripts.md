@@ -1,24 +1,38 @@
 # Client Scripts in ServiceNow
 ## Table of Contents 
 **[Overview](#overview)**<br>
+<<<<<<< HEAD
 **[Types of Scripts](#types-of-scripts)**<br>
+=======
+**[Script Types](#script-types)**<br>
+>>>>>>> 80ed025fe1ab29f44a8554d54a48eaa4560472c0
 **[GlideForm API](#glideform-api)**<br>
 **[Tutorial](#tutorial)**<br>
 **[Other Things to Try](#other-things-to-try)**
 
 
+<<<<<<< HEAD
 
 
 ### Overview
 ____
 What are Client Scripts?
+=======
+### Overview
+____
+**What are Client Scripts?**
+>>>>>>> 80ed025fe1ab29f44a8554d54a48eaa4560472c0
 * Client scripts are used to customize features using JavaScript
 * You can use scripts to run on server as well as client browsers
 * Since servers have direct access to the database server scripts are used to modify records in the DB and generate events
 * Since the client has access to forms, client scripts are used to tailor forms to the current user and conditions
 * Client Scripts can be used to configure forms, form fields, and form values in real time while user is using the form
 
+<<<<<<< HEAD
 Some of the things that client scripts can do include:
+=======
+**Some of the things that client scripts can do include:**
+>>>>>>> 80ed025fe1ab29f44a8554d54a48eaa4560472c0
 * Place the cursor in a form field on form load
 * Generate alerts, confirmations, and messages
 * Populate a form field in response to another field's value
@@ -33,7 +47,11 @@ Some of the things that client scripts can do include:
 *Note: to view all Client Scripts in your ServiceNow instance, head to **System Definition > Client Scripts** or type **"Client Scripts"** in the navigator*
 
 
+<<<<<<< HEAD
 ### Types of Scripts
+=======
+### Script Types
+>>>>>>> 80ed025fe1ab29f44a8554d54a48eaa4560472c0
 There are a few different kinds of scripts:
 
 <img width="339" alt="screen shot 2019-01-25 at 1 26 29 pm" src="https://user-images.githubusercontent.com/6828733/51774718-22166b80-20a8-11e9-8e1f-37461dc9ee79.png">
@@ -47,7 +65,11 @@ There are a few different kinds of scripts:
 
 * an ```onCellEdit()``` is similar to an ```onChange()``` function, except the script runs when a user changes a field on a list rather than a form. (But we don't really need to worry about this one)
 
+<<<<<<< HEAD
 <br>
+=======
+
+>>>>>>> 80ed025fe1ab29f44a8554d54a48eaa4560472c0
 
 
 ### GlideForm API
@@ -61,7 +83,11 @@ function onLoad() {
     g_form.removeOption('priority', '1');
 }
 ```
+<<<<<<< HEAD
 Here's a list of ```g_form``` methods you can use which allow you to do the following:
+=======
+**Here's a list of ```g_form``` methods you can use which allow you to do the following:**
+>>>>>>> 80ed025fe1ab29f44a8554d54a48eaa4560472c0
 * Draw attention: ```flash()```, ```showFieldMsg()```
 * Get information: ```getValue()```, ```getReference()```
 * Change a field value: ```setValue()```, ```clearValue()```
@@ -179,7 +205,11 @@ function onChange(control, oldValue, newValue, isLoading) {
 <br>**21.** Fill out the **About Me** form and try to choose a future date as your birthday.
 <br>**22.** You should see an alert window tell you that your choice is invalid. When you close the alert message, you should see that the **Birthdate** field has been set to empty.
 <br> 
+<<<<<<< HEAD
 ##### Congratulations! You've just created your first client script.
+=======
+#### Congratulations! You've just created your first client script.
+>>>>>>> 80ed025fe1ab29f44a8554d54a48eaa4560472c0
 
 ### Other things to try:
 * Adding a few more fields and creating an ``onLoad()`` that autofills the user and email fields.
