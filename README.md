@@ -5,8 +5,9 @@
 4. [CSS](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/CSS%20Tutorial.md)
 5. [Bootstrap](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Bootstrap.md)
 6. [Update Set Instructions](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Update%20Set%20Instructions.md)
-7. [Client Scripts](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Client%20Scripts.md)
-8. [GlideAjax](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/GlideAjax.md)
+7. [UI Policies](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Creating%20UI%20Policies.md)
+8. [Client Scripts](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Client%20Scripts.md)
+9. [GlideAjax](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/GlideAjax.md)
 
 # Overview
 This repository will serve to train new hires in the fundamental concepts of ServiceNow. The goal of this documentation is to allow readers to learn, while also productively spending their time.

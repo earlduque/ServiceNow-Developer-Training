@@ -35,10 +35,16 @@ Refer to ServiceNow [documentation](https://docs.servicenow.com/bundle/london-pl
 **2.** Click **New**<br>
 **3.** To change the view, in **Related Links** click **Default View**<br>
 **4.** Select the table to be affected by the UI Policy.<br>
+<<<<<<< HEAD
 **5.** Click submit.<br>    
 
 #### Just a reminder that
 * In order for the UI policy to work as intended: 
+=======
+**5.** Click submit.<br> 
+
+*Just a reminder* that in order for the UI policy to work as intended: 
+>>>>>>> upstream/master
 * It must be set to an 'Active' state
 * The items in the Conditions field must evaluate to true
 * The field specified in the UI policy action is present on the specified form
@@ -77,4 +83,8 @@ Refer to ServiceNow [documentation](https://docs.servicenow.com/bundle/london-pl
 [Creating UI Policies In ServiceNow](https://www.youtube.com/watch?v=JVtooXnOwFc) <br>
 [15. ServiceNow UI Policy - Use Cases with Solution](https://www.youtube.com/watch?v=C4St-ZIFZy4) <br>
 [ServiceNow UI Policy Action Tutorial | ServiceNow Tutorial For Beginners | What is AIX ? - ExcelR](https://www.youtube.com/watch?v=WFZfWB1LOGs)
+<<<<<<< HEAD
  
+=======
+ 
+>>>>>>> upstream/master

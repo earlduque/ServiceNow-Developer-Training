@@ -1,6 +1,16 @@
 # Use CSS within ServiceNow Widgets
 
-Objective: learn how CSS interacts with HTML, and how to use CSS within widgets
+Objective: learn how CSS interacts with HTML, how to use CSS within widgets, and the best practices of CSS
+
+## Table of Contents
+
+1. [CSS Basics](#CSS-Basics)
+2. [Create the Widget](#Create-the-Widget)
+3. [Widget View](#Widget-View)
+4. [Add HTML to Your Widget](#Add-HTML-to-Your-Widget)
+5. [Add CSS to Your Widget](#Add-CSS-to-Your-Widget)
+6. [Resources](#Resources)
+7. [Best Practices](#Best-Practices)
 
 ## CSS Basics
 
