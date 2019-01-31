@@ -259,6 +259,65 @@ ul li {
 
 This statement will make all `li` elements that are descendants of `ul` elements be underlined. Save your widget and notice how the Shopping List is underlined, but the To Do List is not.
 
+#### Child Combinator
+
+Elements matched by the second selector must be the immediate children of the elements matched by the first selector. This is stricter than the descendant combinator, which matches all elements matched by the second selector for which there exists an ancestor element matched by the first selector.
+
+Add this HTML inside of your `#special div` underneath the `ol` :
+
+```html
+<div><h3>h3 nested in a div, so not the immediate child of #special</h3></div>
+```
+
+Now add this CSS:
+
+```css
+#special > h3 {
+    color: DodgerBlue;
+}
+```
+
+Save your widget. Notice how only the `h3` elements "Shopping List" and "To Do List" changed colors, since they are immediate children of the `#special div`.
+
+#### Adjacent Sibling Combinator
+
+This selector matches the second element only if it immediately follows the first element, and both are children of the same parent element.
+
+Add this CSS:
+
+```css
+a + a {
+    font-size: 20px;
+}
+```
+
+This statement means for any `a` tag that immediately follows another `a` tag, make the font-size 20px. Save your widget. Notice how the second and third `a` tags now have a font-size of 20px.
+
+#### General Sibling Combinator
+
+This selector matches the second element only if it follows the first element (though not necessarily immediately), and both are children of the same parent element.
+
+Add this to your HTML underneath the links:
+
+```html
+<div>
+    <span>This is not red.</span>
+    <p>Here is a paragraph.</p>
+    <code>Here is some code.</code> <span>And here is a red span!</span>
+    <code>More code...</code> <span>And this is a red span!</span>
+</div>
+```
+
+Add this CSS:
+
+```css
+p ~ span {
+    color: red;
+}
+```
+
+This statement will make all `spans` that follow `p` elements (not immediately in this case) red. Save your widget to see that this happens.
+
 ### Advanced Declarations
 
 #### Multiple Classes
