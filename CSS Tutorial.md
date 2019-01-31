@@ -394,6 +394,121 @@ Save your widget and notice how the font of everything changed to `fantasy`.
 
 Here's what your final widget should look like as a reference:
 
+HTML code:
+
+```html
+<div class="hello">
+    <h1>Hello, World!</h1>
+    <p>
+        Cat ipsum dolor sit amet, lick yarn hanging out of own butt pretend you
+        want to go out but then don't so jump off balcony, onto stranger's head
+        yet i like fish. Jump five feet high and sideways when a shadow moves
+        love you, then bite you why use post when this sofa is here spot
+        something, big eyes, big eyes, crouch, shake butt, prepare to pounce.
+    </p>
+</div>
+
+<div id="special">
+    <h3>Shopping List:</h3>
+    <ul>
+        <li>Bananas</li>
+        <li>Potatoes</li>
+        <li>Rice</li>
+    </ul>
+    <h3>To Do List:</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <div>
+        <h3>h3 nested in a div, so not the immediate child of #special</h3>
+    </div>
+</div>
+
+<div>
+    <p>
+        Cat ipsum dolor sit amet, lick <span>yarn</span> hanging out of own butt
+        pretend you want to go out but then don't so jump off balcony, onto
+        stranger's head yet i like
+    </p>
+</div>
+
+<a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>
+
+<div>
+    <span>This is not red.</span>
+    <p>Here is a paragraph.</p>
+    <code>Here is some code.</code> <span>And here is a red span!</span>
+    <code>More code...</code> <span>And this is a red span!</span>
+</div>
+
+<h2 class="class1">I'm only class1</h2>
+<h2 class="class2">I'm only class2</h2>
+<h2 class="class1 class2">I have class1 and class2!</h2>
+```
+
+CSS code:
+
+```css
+h1 {
+    color: red;
+}
+
+div {
+    background: pink;
+}
+
+.hello {
+    border: 3px solid blue;
+}
+
+#special {
+    font-size: 30px;
+}
+
+a:hover {
+    color: red;
+}
+
+ul,
+ol {
+    color: purple;
+}
+
+ul li {
+    text-decoration: underline;
+}
+
+#special > h3 {
+    color: Dodgerblue;
+}
+
+a + a {
+    font-size: 20px;
+}
+
+p ~ span {
+    color: red;
+}
+
+.class1 {
+    color: darkorange;
+}
+
+.class2 {
+    border: 10px dotted teal;
+}
+
+.class1.class2 {
+    background: black;
+}
+
+* {
+    font-family: fantasy;
+}
+```
+
 ![Final Widget View](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/final-widget-view.png)
 
 ## Resources
