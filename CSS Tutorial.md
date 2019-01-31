@@ -291,6 +291,28 @@ Add this to your CSS:
 
 Save your widget and see how the last `h2` now has a black background.
 
+#### Universal Selector
+
+The syntax of the universal selector is:
+
+```css
+* {
+    property: value;
+}
+```
+
+This selector matches elements of any type, meaning that it selects all of the elements on the widget.
+
+To see how it works, add this to your CSS:
+
+```css
+* {
+    font-family: fantasy;
+}
+```
+
+Save your widget and notice how the font of everything changed to `fantasy`.
+
 ### Final Widget
 
 Here's what your final widget should look like as a reference:
