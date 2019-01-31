@@ -117,9 +117,6 @@ function onChange(){
             g_form.setValue('table', 'table');
         }
     })
-    
-    
-
 }
 ```
 
