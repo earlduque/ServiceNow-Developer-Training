@@ -11,15 +11,12 @@
 
 ### Overview
 ____
-Client scripts are used to customize features using JavaScript <br>
-
-You can use scripts to run on server as well as client browsers <br>
-
-Since servers have direct access to the database server scripts are used to modify records in the DB and generate events
-
-Since the client has access to forms client scripts are used to tailor forms to the current user and conditions
-
-Client Scripts can be used to configure forms, form fields and form values in real time while user is using form
+What are Client Scripts?
+* Client scripts are used to customize features using JavaScript
+* You can use scripts to run on server as well as client browsers
+* Since servers have direct access to the database server scripts are used to modify records in the DB and generate events
+* Since the client has access to forms, client scripts are used to tailor forms to the current user and conditions
+* Client Scripts can be used to configure forms, form fields, and form values in real time while user is using the form
 
 Some of the things that client scripts can do include:
 * Place the cursor in a form field on form load
