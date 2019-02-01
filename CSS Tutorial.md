@@ -1,6 +1,16 @@
 # Use CSS within ServiceNow Widgets
 
-Objective: learn how CSS interacts with HTML, and how to use CSS within widgets
+Objective: learn how CSS interacts with HTML, how to use CSS within widgets, and the best practices of CSS
+
+## Table of Contents
+
+1. [CSS Basics](#CSS-Basics)
+2. [Create the Widget](#Create-the-Widget)
+3. [Widget View](#Widget-View)
+4. [Add HTML to Your Widget](#Add-HTML-to-Your-Widget)
+5. [Add CSS to Your Widget](#Add-CSS-to-Your-Widget)
+6. [Resources](#Resources)
+7. [Best Practices](#Best-Practices)
 
 ## CSS Basics
 
@@ -220,26 +230,103 @@ to perform fine-grained selections. CSS has several ways to select elements
 based on how they are related to one another. Some common relationships are
 expressed as follows (A and B are any selector from above):
 
-| Name                  | Syntax | Select                                      |
-| --------------------- | ------ | ------------------------------------------- |
-| Group of selectors    | A, B   | Any element that matches A and/or B         |
-| Descendant combinator | A B    | Any element matching B that is a child of A |
+| Name                        | Syntax | Select                                                                                                                             |
+| --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Group of selectors          | A, B   | Any element that matches A and/or B                                                                                                |
+| Descendant combinator       | A B    | Any element matching B that is a **descendant** (child, child of child, etc.) of A                                                 |
+| Child combinator            | A > B  | Any element matching B that is a **direct** child of A                                                                             |
+| Adjacent sibling combinator | A + B  | Any element matching B that is the next **sibling** of an element matching A (the next child of the same parent)                   |
+| General sibling combinator  | A ~ B  | Any element matching B that is one of the next **siblings** of an element matching A (one of the next children of the same parent) |
 
-Add these to your CSS:
+Let's go through these one-by-one to see how they work.
+
+#### Groups of Selectors
+
+You can write groups of selectors separated by commas to apply the same rule to multiple sets of selected elements at once.
+
+Add this to your CSS:
 
 ```css
 ul,
-li {
-    text-decoration: underline;
-}
-
-div p {
-    font-weight: bold;
+ol {
+    color: purple;
 }
 ```
 
-Save your widget. All `ul` and `li` elements will have underlines, and all `p`
-elements inside of `div` elements will be bold.
+Save your widget and notice how both the bulleted and numbered lists turned purple.
+
+#### Descendent Combinator
+
+This selector combines two selectors such that elements matched by the second selector are selected if they have an ancestor element matching the first selector.
+
+Add this to your CSS:
+
+```css
+ul li {
+    text-decoration: underline;
+}
+```
+
+This statement will make all `li` elements that are descendants of `ul` elements be underlined. Save your widget and notice how the Shopping List is underlined, but the To Do List is not.
+
+#### Child Combinator
+
+Elements matched by the second selector must be the immediate children of the elements matched by the first selector. This is stricter than the descendant combinator, which matches all elements matched by the second selector for which there exists an ancestor element matched by the first selector.
+
+Add this HTML inside of your `#special div` underneath the `ol` :
+
+```html
+<div><h3>h3 nested in a div, so not the immediate child of #special</h3></div>
+```
+
+Now add this CSS:
+
+```css
+#special > h3 {
+    color: DodgerBlue;
+}
+```
+
+Save your widget. Notice how only the `h3` elements "Shopping List" and "To Do List" changed colors, since they are immediate children of the `#special div`.
+
+#### Adjacent Sibling Combinator
+
+This selector matches the second element only if it immediately follows the first element, and both are children of the same parent element.
+
+Add this CSS:
+
+```css
+a + a {
+    font-size: 20px;
+}
+```
+
+This statement means for any `a` tag that immediately follows another `a` tag, make the font-size 20px. Save your widget. Notice how the second and third `a` tags now have a font-size of 20px.
+
+#### General Sibling Combinator
+
+This selector matches the second element only if it follows the first element (though not necessarily immediately), and both are children of the same parent element.
+
+Add this to your HTML underneath the links:
+
+```html
+<div>
+    <span>This is not red.</span>
+    <p>Here is a paragraph.</p>
+    <code>Here is some code.</code> <span>And here is a red span!</span>
+    <code>More code...</code> <span>And this is a red span!</span>
+</div>
+```
+
+Add this CSS:
+
+```css
+p ~ span {
+    color: red;
+}
+```
+
+This statement will make all `spans` that follow `p` elements (not immediately in this case) red. Save your widget to see that this happens.
 
 ### Advanced Declarations
 
@@ -291,9 +378,146 @@ Add this to your CSS:
 
 Save your widget and see how the last `h2` now has a black background.
 
+#### Universal Selector
+
+The syntax of the universal selector is:
+
+```css
+* {
+    property: value;
+}
+```
+
+This selector matches elements of any type, meaning that it selects all of the elements on the widget.
+
+To see how it works, add this to your CSS:
+
+```css
+* {
+    font-family: fantasy;
+}
+```
+
+Save your widget and notice how the font of everything changed to `fantasy`.
+
 ### Final Widget
 
 Here's what your final widget should look like as a reference:
+
+HTML code:
+
+```html
+<div class="hello">
+    <h1>Hello, World!</h1>
+    <p>
+        Cat ipsum dolor sit amet, lick yarn hanging out of own butt pretend you
+        want to go out but then don't so jump off balcony, onto stranger's head
+        yet i like fish. Jump five feet high and sideways when a shadow moves
+        love you, then bite you why use post when this sofa is here spot
+        something, big eyes, big eyes, crouch, shake butt, prepare to pounce.
+    </p>
+</div>
+
+<div id="special">
+    <h3>Shopping List:</h3>
+    <ul>
+        <li>Bananas</li>
+        <li>Potatoes</li>
+        <li>Rice</li>
+    </ul>
+    <h3>To Do List:</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <div>
+        <h3>h3 nested in a div, so not the immediate child of #special</h3>
+    </div>
+</div>
+
+<div>
+    <p>
+        Cat ipsum dolor sit amet, lick <span>yarn</span> hanging out of own butt
+        pretend you want to go out but then don't so jump off balcony, onto
+        stranger's head yet i like
+    </p>
+</div>
+
+<a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>
+
+<div>
+    <span>This is not red.</span>
+    <p>Here is a paragraph.</p>
+    <code>Here is some code.</code> <span>And here is a red span!</span>
+    <code>More code...</code> <span>And this is a red span!</span>
+</div>
+
+<h2 class="class1">I'm only class1</h2>
+<h2 class="class2">I'm only class2</h2>
+<h2 class="class1 class2">I have class1 and class2!</h2>
+```
+
+CSS code:
+
+```css
+h1 {
+    color: red;
+}
+
+div {
+    background: pink;
+}
+
+.hello {
+    border: 3px solid blue;
+}
+
+#special {
+    font-size: 30px;
+}
+
+a:hover {
+    color: red;
+}
+
+ul,
+ol {
+    color: purple;
+}
+
+ul li {
+    text-decoration: underline;
+}
+
+#special > h3 {
+    color: Dodgerblue;
+}
+
+a + a {
+    font-size: 20px;
+}
+
+p ~ span {
+    color: red;
+}
+
+.class1 {
+    color: darkorange;
+}
+
+.class2 {
+    border: 10px dotted teal;
+}
+
+.class1.class2 {
+    background: black;
+}
+
+* {
+    font-family: fantasy;
+}
+```
 
 ![Final Widget View](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/final-widget-view.png)
 
@@ -304,3 +528,29 @@ answer:
 
 -   https://developer.mozilla.org/en-US/docs/Web/CSS
 -   https://css-tricks.com/
+
+## Best Practices
+
+1. Make it Readable
+
+Good readability of your CSS makes it easier to maintain.
+
+You could write your CSS like this, with everything on one line:
+
+```css
+/* Ignore the second comment. I use the Prettier extension which automatically formats code, but I don't want this code to be formatted to show how unreadable / ugly it is */
+/* prettier-ignore */
+.example {
+    background: red; padding: 2em; border: 1px solid black;
+}
+```
+
+However, this is hard to read. The best practice is to write each style on its own line like so:
+
+```css
+.example {
+    background: red;
+    padding: 2em;
+    border: 1px solid black;
+}
+```
