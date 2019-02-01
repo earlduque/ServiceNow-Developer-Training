@@ -8,6 +8,7 @@
 7. [UI Policies](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Creating%20UI%20Policies.md)
 8. [Client Scripts](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Client%20Scripts.md)
 9. [GlideAjax](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/GlideAjax.md)
+10. [Business Rules](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Business%20Rules.md)
 
 # Overview
 This repository will serve to train new hires in the fundamental concepts of ServiceNow. The goal of this documentation is to allow readers to learn, while also productively spending their time.
