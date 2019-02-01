@@ -99,8 +99,6 @@ Using the filter conditions allows you to automatically filter condition scenari
  <img width="899" alt="screen shot 2019-01-31 at 4 33 36 pm" src="https://user-images.githubusercontent.com/6828733/52094942-f991e400-2575-11e9-9376-ca3db225f422.png"><br><br>
  ```(current.asset.nil()  || (current.asset.ci != current.sys_id))```
  
- In this example, the condition will only run *if* the current asset is nil, or in other words, the current CI record does not have an asset associated with it **OR** if the current asset CI does not equal with the ``current_sys_id``
- 
- When the condition evaluated to true, the script underneath the condition will run.
+ In this example, the condition will only run *if* the current asset is nil, or in other words, the current CI record does not have an asset associated with it **OR** if the current asset CI does not equal with the ``current_sys_id``. When the condition evaluated to true, the script underneath the condition will run.
 <br>
 **6.** After everything on the form has been filled out, hit **Submit**.<br>.
