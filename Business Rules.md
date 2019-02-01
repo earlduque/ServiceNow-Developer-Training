@@ -6,7 +6,6 @@
 **[When should I use a Business Rule](#when-should-i-use-a-business-rule)**<br>
 **[Business Rule Processing Flow](#business-rule-operating-flow)**<br>
 **[Creating a Business Rule](#creating-a-business-rule)**<br>
-**[]()**<br>
 
 
 ### What is a Business Rule?
@@ -68,16 +67,40 @@ The database operations that the system takes on the record:
 ### Business Rule Operating Flow
 ___
 
-
+Below is an example of a Business Rule operating flow:
+**1.** The user sends a request to the server for a specific incident (query).<br>
+**2.** Application server requests record from the database server.<br>
+**3.** The database server responds to the application server with the record.<br>
+**4.** The application server checks for display-business-rules, then sends the resonse back to the user. The display event will fire any existing display-business-rules.<br>
+**5.** User modifies incident record and sends update request.<br>
+**6.** Application server receives update, checks for before-business-rules, then sends to database server to be updated.<br>
+**7.** The database server updates the record.<br>
+**8.** Lastly, the application server checks for after-business-rules.<br><br>
+<img width="1299" alt="screen shot 2019-01-31 at 3 16 30 pm" src="https://user-images.githubusercontent.com/6828733/52095970-fd276a00-2579-11e9-9a20-aa78e4e94c6e.png">
+<br><br>
+![businessruleprocessingflow](https://user-images.githubusercontent.com/6828733/52096034-33fd8000-257a-11e9-8d09-2f6512826a8d.png) <br>
 
 ### Creating a Business Rule
 ____
 
-**1.** Navigate to **System Definition > Business Rules**<br>
-**2.** Click **New**<br>
+**1.** Navigate to **System Definition > Business Rules**.<br>
+**2.** Click **New**.<br>
 **3.** A Business Rule runs a specific table. After naming your Business Rule, choose a table you wish to modify from the **Table** list.<br>
-**4.** Next, you have to select the conditions under which the Business Rule will run. The first condition you must set <br>
-**5.**<br>
-**6.**<br>
-**7.**<br>
-**8.**<br>
+<img width="937" alt="screen shot 2019-01-31 at 4 08 37 pm" src="https://user-images.githubusercontent.com/6828733/52094077-8044c200-2572-11e9-8fc6-6cd312b336d0.png">
+<br><br>
+
+In this example, we are looking at a Business Rule that creates an asset on an insert. The table that this Business Rule will be modifying is the Configuration Items [cmdb_ci] table. <br>
+**4.** Afterwards, we have to specify *when* we want the Business Rule to run (i.e. *before* a record is inserted, *after* a record is inserted, etc.) The order will specify the order in which the Business Rule will run in.<br>
+**5.** Next, you have to select the conditions under which the Business Rule will run. There are two conditions: database operations, and custom conditions. Custom conditions will either allow you to choose from the *Filter Conditions* field shown at the bottom, or using a *Condition* script field under the **Advanced** tab.<br>
+<img width="915" alt="screen shot 2019-01-31 at 3 52 09 pm" src="https://user-images.githubusercontent.com/6828733/52093606-acf7da00-2570-11e9-9656-442987197269.png"><br><br>
+*Note: In order to access the *Condition* script field, the **Advanced** checkbox on the upper right hand side of the form, under the **Active** checkbox*.<br>
+Using the filter conditions allows you to automatically filter condition scenarios from lists they have provided (like UI policies).<br>
+ If you are writing a custom script, you must specify the condition in which the Business Rule should run in the *Condition* field.<br>
+ <img width="899" alt="screen shot 2019-01-31 at 4 33 36 pm" src="https://user-images.githubusercontent.com/6828733/52094942-f991e400-2575-11e9-9376-ca3db225f422.png"><br><br>
+ ```(current.asset.nil()  || (current.asset.ci != current.sys_id))```
+ 
+ In this example, the condition will only run *if* the current asset is nil, or in other words, the current CI record does not have an asset associated with it **OR** if the current asset CI does not equal with the ``current_sys_id``
+ 
+ When the condition evaluated to true, the script underneath the condition will run.
+<br>
+**6.** After everything on the form has been filled out, hit **Submit**.<br>.
