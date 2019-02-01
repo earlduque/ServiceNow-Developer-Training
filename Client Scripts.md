@@ -1,6 +1,7 @@
 # Client Scripts in ServiceNow
 ## Table of Contents 
 **[Overview](#overview)**<br>
+**[Types of Scripts](#types-of-scripts)**<br>
 **[Script Types](#script-types)**<br>
 **[GlideForm API](#glideform-api)**<br>
 **[Tutorial](#tutorial)**<br>
@@ -16,6 +17,8 @@ ____
 * Since the client has access to forms, client scripts are used to tailor forms to the current user and conditions
 * Client Scripts can be used to configure forms, form fields, and form values in real time while user is using the form
 
+
+Some of the things that client scripts can do include:
 **Some of the things that client scripts can do include:**
 * Place the cursor in a form field on form load
 * Generate alerts, confirmations, and messages
@@ -32,6 +35,7 @@ ____
 
 
 ### Script Types
+___
 There are a few different kinds of scripts:
 
 <img width="339" alt="screen shot 2019-01-25 at 1 26 29 pm" src="https://user-images.githubusercontent.com/6828733/51774718-22166b80-20a8-11e9-8e1f-37461dc9ee79.png">
@@ -47,9 +51,8 @@ There are a few different kinds of scripts:
 
 
 
-
 ### GlideForm API
-
+___
 Client scripts configure forms and their fields/values through an API (*Application Programming Interface*) called GlideForm. You can call GlideForm API through g_form to do things like: highlight area, get info or set value for field
 change choices in a list
 
@@ -59,6 +62,7 @@ function onLoad() {
     g_form.removeOption('priority', '1');
 }
 ```
+
 **Here's a list of ```g_form``` methods you can use which allow you to do the following:**
 * Draw attention: ```flash()```, ```showFieldMsg()```
 * Get information: ```getValue()```, ```getReference()```
@@ -119,6 +123,7 @@ function onChange(){
 ```
 
 ### Tutorial
+___
 
 *Here is a tutorial on making your first client script using JavaScript and the GlideForm API. We are just going to do some simple date validation.*
 
@@ -177,9 +182,12 @@ function onChange(control, oldValue, newValue, isLoading) {
 <br>**21.** Fill out the **About Me** form and try to choose a future date as your birthday.
 <br>**22.** You should see an alert window tell you that your choice is invalid. When you close the alert message, you should see that the **Birthdate** field has been set to empty.
 <br> 
+
 #### Congratulations! You've just created your first client script.
 
+
 ### Other things to try:
+___
 * Adding a few more fields and creating an ``onLoad()`` that autofills the user and email fields.
 * Instead of having a date validation ``onChange()`` script, make it so that the date is validated until the form is submitted using an ``onSubmit`` script.
 * Use ``onSubmit()`` to produce a pop up window asking if the user is sure that they want to submit the form. Only submit if the user selects "Yes".
