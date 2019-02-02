@@ -531,26 +531,119 @@ answer:
 
 ## Best Practices
 
-1. Make it Readable
+1.  Make it Readable
 
-Good readability of your CSS makes it easier to maintain.
+    Good readability of your CSS makes it easier to maintain.
 
-You could write your CSS like this, with everything on one line:
+    You could write your CSS like this, with everything on one line:
 
-```css
-/* Ignore the second comment. I use the Prettier extension which automatically formats code, but I don't want this code to be formatted to show how unreadable / ugly it is */
-/* prettier-ignore */
-.example {
-    background: red; padding: 2em; border: 1px solid black;
-}
-```
+    ```css
+    /* Ignore the second comment. I use the Prettier extension which automatically formats code, but I don't want this code to be formatted to show how unreadable / ugly it is */
+    /* prettier-ignore */
+    .example {
+        background: red; padding: 2em; border: 1px solid black;
+    }
+    ```
 
-However, this is hard to read. The best practice is to write each style on its own line like so:
+    However, this is hard to read. The best practice is to write each style on its own line like so:
 
-```css
-.example {
-    background: red;
-    padding: 2em;
-    border: 1px solid black;
-}
-```
+    ```css
+    .example {
+        background: red;
+        padding: 2em;
+        border: 1px solid black;
+    }
+    ```
+
+2.  Organize your CSS in a Top-Down Format
+
+    It is helpful to organize your CSS in a way that lets you quickly and easily find elements of your code. A "Top-Down" format is ordered like so:
+
+    1. Generic elements first (`body`, `a`, `p`, `h1`, etc.)
+    2. `.header`
+    3. `.nav-menu`
+    4. `.main-content`
+    5. `.footer`
+
+3.  Combine CSS Elements
+
+    Elements will likely share the same style properties. For example, you might have an `h1` and an `h2` with these styles:
+
+    ```css
+    h1 {
+        font-family: verdana;
+        color: #e1e1e1;
+    }
+
+    h2 {
+        font-family: verdana;
+        color: #e1e1e1;
+    }
+    ```
+
+    To avoid repeating code, it is best to combine these elements like so:
+
+    ```css
+    h1,
+    h2 {
+        font-family: verdana;
+        color: #e1e1e1;
+    }
+    ```
+
+4.  Use Appropriate Naming Conventions
+
+    CSS allows you to separate the styling and design of the elements from the content of them. You can change the entire design of a widget just by changing the CSS, without changing the HTML.
+
+    So, it's best not to give your CSS classes and ids limiting names. The naming of your CSS elements is based on what they are, not what they give the impression of being like. For example, it's better to use the name `.post-title`, rather than `.post-large-font`.
+
+5.  Avoid Inline Styling
+
+    Inline styles are when you declare the CSS within the HTML. For example,
+
+    ```html
+    <p style="background:#ccc; color:#000; border: solid black 1px;"></p>
+    ```
+
+    If you had to only use inline styles, your widgets would quickly become bloated and very hard to maintain. This is because inline styles must be applied to every element you want them on. So, the best practice is to keep your HTML and CSS code separate.
+
+6.  Shorthand CSS
+
+    Shorthand CSS allows you to define the same styles in less code. Most properties have shorthand definitions. For example,
+
+    ```css
+    img {
+        margin-top: 5px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+    ```
+
+    is the same as
+
+    ```css
+    img {
+        margin: 5px 10px;
+    }
+    ```
+
+    with shorthand notation.
+
+7.  Don't Use `!important`
+
+    When an `!important` rule is used on a style declaration, it overrides any other declarations. This is generally bad practice and should be avoided since it makes debugging more difficult by breaking the natural cascading of your CSS rules.
+
+    It's better to find out why the CSS selector you're trying isn't working than to use a quick fix like `!important`.
+
+8.  Em, Rem, and Pixel
+
+    Some of the units you can style your elements with are `em`, `rem`, and `pixel`. Which one should you use?
+
+    There aren't any specific rules about which ones you should use, but in general:
+
+    | Type | About                                                                                          | Use Case                                                                                                    |
+    | ---- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+    | em   | The value of 1 em is relative to the font-size of the direct parent                            | em is great for responsiveness                                                                              |
+    | rem  | Relative to the font-size of the `<html>` element                                              | Easy to scale all headings and paragraphs on the page                                                       |
+    | px   | Pixels give you the most precision but don't offer any scaling when used in responsive designs | They are reliable, easy to understand, and present a good visual connection between value and actual result |
