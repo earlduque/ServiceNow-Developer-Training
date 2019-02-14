@@ -5,7 +5,7 @@
 4. [CSS](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/CSS%20Tutorial.md)
 5. [Bootstrap](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Bootstrap.md)
 6. [Update Set Instructions](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Update%20Set%20Instructions.md)
-7. [UI Policies](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Creating%20UI%20Policies.md)
+7. [UI Policies](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/UI%20Policies.md)
 8. [Client Scripts](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Client%20Scripts.md)
 9. [GlideAjax](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/GlideAjax.md)
 10. [Business Rules](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Business%20Rules.md)
