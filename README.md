@@ -1,3 +1,6 @@
+# Overview
+This repository will serve to train new hires in the fundamental concepts of ServiceNow. The goal of this documentation is to allow readers to learn, while also productively spending their time.
+
 # Table of Contents
 
 ### ServiceNow
@@ -13,6 +16,3 @@
 8. [CSS](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/CSS%20Tutorial.md)
 9. [Bootstrap](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Bootstrap.md)
 10. [Regular Expressions](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/Regular%20Expressions.md)
-
-# Overview
-This repository will serve to train new hires in the fundamental concepts of ServiceNow. The goal of this documentation is to allow readers to learn, while also productively spending their time.
