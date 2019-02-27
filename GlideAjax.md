@@ -246,9 +246,8 @@ We want to: update the short description of an incident to Hello World! when the
 13. then we create the callback function and pass in ```response``` as an argument
 14. We then need to create a variable called ```answer``` and assign it to the attribute we want from ```response```.
 15. Then we need to update our incident description field with the "Hello world!" text by using ```g_form.setValue()```. Your code should now look like this: <br>
-<img width="1149" alt="screen shot 2019-02-21 at 4 06 49 pm" src="https://user-images.githubusercontent.com/6828733/53211218-47d65800-35f5-11e9-973c-8e81479ae6bf.png">
-<br>
-16. Hit **Submit**
+<img width="1149" alt="screen shot 2019-02-21 at 4 06 49 pm" src="https://user-images.githubusercontent.com/6828733/53211218-47d65800-35f5-11e9-973c-8e81479ae6bf.png"><br>
+16. Hit **Submit**. <br>
 17. Navigate to **Incidents** and click on any incident. You should see that the short description to the incident has been changed to "Hello World!". <br>
 <img width="690" alt="screen shot 2019-02-21 at 4 52 31 pm" src="https://user-images.githubusercontent.com/6828733/53212250-20818a00-35f9-11e9-9a2c-0245db157450.png"><br>
 <img width="680" alt="screen shot 2019-02-21 at 4 52 41 pm" src="https://user-images.githubusercontent.com/6828733/53212277-3ee78580-35f9-11e9-878a-1503a9639c4d.png">
