@@ -115,7 +115,7 @@ function updateCampus(response) {
       
       if (answer) {
 
-              var returneddata = answer.evalJSON(true);
+              var returneddata = JSON.stringify(answer);
               g_form.setValue("campus", returneddata.sys_id, returneddata.name);
 
       } else {
@@ -150,7 +150,7 @@ ucd_GetLocationData.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
                               };
 
-                              return json.encode(results);
+                              return json.parse(results);
 
                       }
 
