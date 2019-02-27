@@ -234,7 +234,7 @@ We want to: update the short description of an incident to Hello World! when the
 
 4. Select "Client Callable" <br>
 5. The **Script** field auto populates after naming the Script Include. We are then going to create a method called "sayHello" and return a "Hello World!" string.  Update the code so that it looks like this:<br>
-<img width="1147" alt="screen shot 2019-02-21 at 3 54 02 pm" src="https://user-images.githubusercontent.com/6828733/53211072-d4cce180-35f4-11e9-8546-09a79b366fd5.png">
+<img width="1147" alt="screen shot 2019-02-21 at 3 54 02 pm" src="https://user-images.githubusercontent.com/6828733/53211072-d4cce180-35f4-11e9-8546-09a79b366fd5.png"> <br>
 6. Click Submit.<br>
 7. Be sure to copy the name of your Script Include (i.g. ServiceNowGlideAjaxTutorial) <br>
 8. In the navigator head to **Client Scripts**. <br>
