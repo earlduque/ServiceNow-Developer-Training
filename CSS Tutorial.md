@@ -33,10 +33,9 @@ fine grained precision when selecting elements to style.
 
 ## Create the Widget
 
-Login to the sandbox with your admin credentials via the side door:
-https://ucdavisietsand.service-now.com/side_door.do
+Login to your personal developer instance of ServiceNow
 
-1. Go to the Service Portal Configuration: https://ucdavisietsand.service-now.com/sp_config
+1. Search for "Service Portal Configuration" in the Navigator and click on that
 2. Click on Widget Editor
 3. Click on "Create a new widget"
 4. Name your widget: [your name] Test Widget
