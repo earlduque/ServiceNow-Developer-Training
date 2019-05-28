@@ -14,8 +14,8 @@ Note: `GlideAggregate` only works on number fields.
 
 To practice using `GlideAggregate` within ServiceNow:
 
-1. Log into the Sandbox with your Admin credentials via the side-door: https://ucdavisietsand.service-now.com/side_door.do
-2. Navigate to [System Definition - Scripts - Background](https://ucdavisietsand.service-now.com/nav_to.do?uri=%2Fsys.scripts.do)
+1. Log into your personal developer instance
+2. Navigate to `System Definition - Scripts - Background`
 3. Copy this script into the text area:
 
 ```js
