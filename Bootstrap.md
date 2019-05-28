@@ -1,10 +1,10 @@
 # Bootstrap
 
-Bootstrap can be thought of as an open source framework containing CSS styles, JavaScript libraries, and HTML files. Bootstrap consists of hundreds of classes that aim to make more advanced CSS and HTML functionality more accessible. This tutorial will be and introductory course in how Bootstrap can be utilized in HTML and CSS. The most important applications of Bootstrap in ServiceNow will be using it to create reactive widgets/html pages. I will not be covering basic concpets in HTML and CSS during this tutorial.
+Bootstrap can be thought of as an open source framework containing CSS styles, JavaScript libraries, and HTML files. Bootstrap consists of hundreds of classes that aim to make more advanced CSS and HTML functionality more accessible. This tutorial will be and introductory course in how Bootstrap can be utilized in HTML and CSS. The most important applications of Bootstrap in ServiceNow will be using it to create reactive widgets/html pages. I will not be covering basic concepts in HTML and CSS during this tutorial.
 
 ## Setup
 
-We will begin by setting up a widget in ServiceNow so that we can play with a few Bootstrap classes. You can also use an in browser development environment, but I highly reccomend working in ServiceNow. ServiceNow is our development platform afterall.
+We will begin by setting up a widget in ServiceNow so that we can play with a few Bootstrap classes. You can also use an in browser development environment, but I highly recommend working in ServiceNow. ServiceNow is our development platform after all.
 
 To begin:
 
