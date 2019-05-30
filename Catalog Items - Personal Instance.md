@@ -1,6 +1,6 @@
 # Catalog Items within ServiceNow
 
-Objective: learn about catalog items, variable sets, variables, UI policies, client scripts, workflows and request items.
+Objective: learn about catalog items, variable sets, variables, UI policies, and client scripts.
 
 Login to your personal developer instance.
 
@@ -92,7 +92,7 @@ Add the rest of these variables:
     - Mandatory: Checked
     - Order: 500
     - Question: Enter if you need additional information:
-    - Name: enter_if_your_need_additional_information
+    - Name: enter_if_you_need_additional_information
 
 4. Variable 4
 
@@ -108,3 +108,93 @@ Add the rest of these variables:
 Hit the "Try It" button to see your catalog item so far. It should look something like this:
 
 ![second-try-it]()
+
+## Catalog UI Policies
+
+Catalog UI policies control the behavior of catalog item forms when presented to your users.
+
+To start, add the "Catalog UI Policies" to your Related Lists if it isn't already there.
+
+Create a new UI policy and give it these values:
+
+-   Short Description: Hide explain your problem
+-   Catalog Conditions:
+    -   enter_if_you_need_additional_information is No
+    -   Check that it Applies on Catalog Item view, Catalog Tasks, Requested Items
+
+Hit the "Submit" button.
+
+So, we've created a UI policy that will only take effect when the condition is true. In this case, whenever the Yes/No variable is set to No.
+
+To have the UI policy actually do something, we need to add Catalog UI Policy Actions.
+
+Create a new Catalog UI Policy Action and fill out these values:
+
+-   Variable name: explain_your_problem
+-   Mandatory: False
+-   Visible: False
+
+Hit the "Submit" button.
+
+Go back to the "Try It" view of your catalog item and test that your UI Policy works.
+
+When the question "Enter if you need additional information" is set to "No", then the Multi-line text variable asking to "Explain your problem" disappears from the form.
+
+Since the UI Policy is set to "Reverse if False", when the question is set to "Yes", then the "Explain your problem" question appears on the form.
+
+## Catalog Client Scripts
+
+Client-side scripts can add dynamic effects and validation to forms. You can use client side scripts to:
+
+-   Get or set variable values
+-   Hide or display variables
+-   Make variables mandatory or not
+-   Validate form submission
+-   Add something to the cart
+-   Order something immediately
+
+To start, add the "Catalog Client Scripts" to your Related Lists if it isn't already there.
+
+Create a new "Catalog Client Script" and fill out these values:
+
+-   Name: Email validation
+-   UI Type: All
+-   Type: onChange
+-   Variable name: enter_your_email
+-   Applies on Catalog Item view: Checked
+-   Applies on Requested Items: Checked
+-   Applies on Catalog Tasks: Checked
+-   Script:
+
+```js
+// Checks for a valid email address format (example@domain.com)
+function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == "") {
+        return;
+    }
+
+    // Initialization of field, error message, and regex
+    var errField = "enter_your_email",
+        errMessage =
+            "Make sure you enter a complete email with @ and a domain (i.e., .edu, .com, etc.)",
+        regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\$/,
+        errFlag = "false";
+
+    // Testing the field against the regex
+    errFlag = regex.test(g_form.getValue(errField));
+    g_form.hideErrorBox(errField);
+
+    // Error if email did not pass
+    if (!errFlag) {
+        g_form.showFieldMsg(errField, errMessage, "error");
+    } else {
+        g_form.hideErrorBox(errField);
+    }
+}
+```
+
+Hit the "Submit" button.
+
+Go back to the "Try It" view of your catalog item and test out this client script. Whenever the value in the email field changes, then this script will run.
+
+If you enter something like "test", then an error message will pop up saying that the email is not properly formatted. If you change the value to "test@ucdavis.edu", then the error message should go away.
