@@ -1,6 +1,6 @@
 # Catalog Items within ServiceNow
 
-Objective: learn about catalog items, variable sets, variables, UI policies, and client scripts.
+Objective: learn about catalog items, variable sets, variables, UI policies, client scripts, and workflows.
 
 Login to your personal developer instance.
 
@@ -198,3 +198,29 @@ Hit the "Submit" button.
 Go back to the "Try It" view of your catalog item and test out this client script. Whenever the value in the email field changes, then this script will run.
 
 If you enter something like "test", then an error message will pop up saying that the email is not properly formatted. If you change the value to "test@ucdavis.edu", then the error message should go away.
+
+## Workflows
+
+Workflow provides a drag-and-drop interface for automating multi-step processes across the platform. Each workflow consists of a sequence of activities, such as generating records, notifying users of pending approvals, or running scripts. The graphical Workflow Editor represents workflows visually as a type of flowchart. It shows activities as boxes labeled with information about that activity and transitions from one activity to the next as lines connecting the boxes.
+
+To start, click the magnifying glass icon on the Workflow field of your catalog item. Hit the "New" button and fill out these values:
+
+-   Name: Tutorial Workflow
+
+Hit "Submit".
+
+The starting workflow should look like this:
+![initial-workflow]()
+
+Add these tiles to create the workflow:
+
+1. Set Values
+
+    - Name: Set RITM values
+    - Set these values:
+        - State: Work in Progress
+        - Assignment group: ITSM Engineering
+
+2. If
+    - Name: If additional information is Yes
+    - Condition: Variables, Tutorial Item, Enter if you need additional information, is, Yes
