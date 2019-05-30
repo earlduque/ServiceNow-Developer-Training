@@ -35,7 +35,7 @@ You should now be able to add variable sets to your catalog item.
 From the Variable Sets tab, click on the "Edit" button and add the "Standard Employee Questions" variable set to your catalog item.
 
 Hit the "Try It" button to preview what your catalog item looks like so far. You should see something like this:
-![first-try-it]()
+![first-try-it](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/first-try-it.png)
 
 ## Add Variables
 
@@ -107,7 +107,7 @@ Add the rest of these variables:
 
 Hit the "Try It" button to see your catalog item so far. It should look something like this:
 
-![second-try-it]()
+![second-try-it](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/second-try-it.png)
 
 ## Catalog UI Policies
 
