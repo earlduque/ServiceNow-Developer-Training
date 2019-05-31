@@ -210,7 +210,7 @@ To start, click the magnifying glass icon on the Workflow field of your catalog 
 Hit "Submit".
 
 The starting workflow should look like this:
-![initial-workflow]()
+![initial-workflow](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/initial-workflow.png)
 
 Add these tiles to create the workflow:
 
@@ -272,7 +272,7 @@ Add these tiles to create the workflow:
 
 Connect the tiles like this, so it looks like the final workflow:
 
-![final-workflow]()
+![final-workflow](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/final-workflow.png)
 
 So, what exactly is going on?
 
