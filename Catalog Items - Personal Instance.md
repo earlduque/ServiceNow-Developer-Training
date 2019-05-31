@@ -222,5 +222,71 @@ Add these tiles to create the workflow:
         - Assignment group: ITSM Engineering
 
 2. If
+
     - Name: If additional information is Yes
     - Condition: Variables, Tutorial Item, Enter if you need additional information, is, Yes
+
+3. Catalog Task
+
+    - Name: Test task
+    - Stage: Fulfillment
+    - Populate task variables:
+        - Task value from: Fields
+        - Fulfillment group: ITSM Engineering
+        - Short description: Do the work
+    - Add variables:
+        - Add all of them
+
+    Click on the condition "Always" and change it to:
+
+    - Name: Complete
+    - Condition Type: Standard
+    - Condition: activity.result == 3
+
+    Save this workflow condition. Then, change the values to:
+
+    - Name: Incomplete
+    - Condition Type: Else
+
+    To save this, right click on the header and select "Insert"
+
+4. Approval - User
+
+    - Name: Approval from Abe
+    - Stage: Waiting for Approval
+    - Approvers:
+        - Users: Abraham Lincoln
+
+5. Set Values
+
+    - Name: Set rejection values
+    - Stage: Request Cancelled
+    - Values:
+        - State: Closed Incomplete
+
+6. Set Values
+    - Name: Set completion values
+    - Stage: Completed
+    - Values
+        - State: Closed Complete
+
+Connect the tiles like this, so it looks like the final workflow:
+
+![final-workflow]()
+
+So, what exactly is going on?
+
+-   At the start, the first "Set Values" tile will make the Request Item, which is created when a person submits this catalog item, have a State of Work in Progress, and be Assigned to the ITSM Engineering assignment group.
+-   The If condition checks the response for the form question "Enter additional information".
+    -   If the answer is "Yes", the workflow moves to the Approval - User activity
+    -   Else, the workflow moves to the Catalog Task activity
+-   The Approval - User activity will require the user Abraham Lincoln to either approve or reject this request.
+    -   If Approved, the workflow progresses to the same Catalog Task as the Else case from the If tile
+    -   If Rejected, the workflow goes to the Set Values tile that will make the request be in a cancelled state
+-   The Catalog Task activity will generate a task for the ITSM Enginnering assignment group.
+    -   If the state of this task becomes "Closed Complete", or Completed, then the workflow progresses to the Set Values tile that makes the request be in a closed state.
+    -   Else, if the state of task is anything else like "Closed Incomplete", then the workflow progresses to the same Set Values tile that the Rejected Approval goes to
+-   The "Set rejection values" tile will make the RITM be in a Closed Incomplete state.
+-   The "Set completion values" tile will make the RITM be in a "Closed Complete" state.
+
+To see this workflow in action, test around with submitting your catalog item with different answers for the "Enter additional information" question, and setting different state values for the Approval and Catalog Item tasks.
