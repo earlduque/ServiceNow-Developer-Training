@@ -177,7 +177,7 @@ function onChange(control, oldValue, newValue, isLoading) {
     var errField = "enter_your_email",
         errMessage =
             "Make sure you enter a complete email with @ and a domain (i.e., .edu, .com, etc.)",
-        regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\$/,
+        regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/,
         errFlag = "false";
 
     // Testing the field against the regex
