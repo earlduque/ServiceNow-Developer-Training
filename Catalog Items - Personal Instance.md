@@ -37,6 +37,10 @@ From the Variable Sets tab, click on the "Edit" button and add the "Standard Emp
 Hit the "Try It" button to preview what your catalog item looks like so far. You should see something like this:
 ![first-try-it](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/first-try-it.png)
 
+At UC Davis, catalog items are *always* submitted using the Service Portal. To view your catalog item in the Service Portal on your personal instance instead, right click on the header of the catalog item and select "Copy sys_id." 
+Go to the following link, replacing with your personal instance and the catalog sys_id you just copied: 
+    https://**your instance**.service-now.com/sp?id=sc_cat_item&sys_id=**your catalog item sys_id**
+
 ## Add Variables
 
 Service catalog variables allow you to gather information from users. There are many different types of variables you will use when creating catalog items. Here's some of the most common ones:
