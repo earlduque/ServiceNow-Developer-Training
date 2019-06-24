@@ -14,20 +14,20 @@ To practice using `GlideRecord`:
 
 // create new GlideRecord from incident table
 // Filter for active incidents in state 1 (new)
-var gr = new GlideRecord('incident'); 
-gr.addQuery('active', true);
-gr.addQuery('state', '1'); 
-gr.query();
+var incident_gr = new GlideRecord('incident'); 
+incident_gr.addQuery('active', true);
+incident_gr.addQuery('state', '1'); 
+incident_gr.query();
 
 // Print out number of new incidents
 gs.info("Number of new incidents:");
-gs.info(gr.getRowCount());
+gs.info(incident_gr.getRowCount());
 
 // Loop through record and print INC number and link
 gs.info("Printing incident numbers:");
-while(gr.next()) { 
-   gs.info(gr.getValue('number'));
-   gs.info(gr.getLink(false));
+while(incident_gr.next()) { 
+   gs.info(incident_gr.getValue('number'));
+   gs.info(incident_gr.getLink(false));
 }
 ```
 4. Click the `Run script` button
@@ -48,12 +48,12 @@ Here's an example to create a new incident using the `initialize` and `insert` m
 
 ``` javascript
 //Create a new Incident record and populate the fields with the values below
-var gr = new GlideRecord('incident');
-gr.initialize();
-gr.short_description = 'Issue with signing into email';
-gr.category = 'email';
-gr.caller_id.setDisplayValue('Earl Duque');
-gr.insert();
+var inc_gr = new GlideRecord('incident');
+inc_gr.initialize();
+inc_gr.setValue('short_description', 'Issue with signing into email');
+inc_gr.setValue('category', 'email');
+inc_gr.caller_id.setDisplayValue('Earl Duque');
+inc_gr.insert();
 ```
 
 ## Resources
