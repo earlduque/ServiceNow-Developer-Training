@@ -5,10 +5,10 @@ Objective: Learn how to use ```GlideRecord``` within ServiceNow
 The ```GlideRecord``` class is used for executing database operations without having to write SQL queries. ```GlideRecord``` can be useful for retrieving records which would be difficult to find using the GUI filtering options.
 
 ## Tutorial
-To practice using ```GlideRecord```: 
+To practice using `GlideRecord`: 
 1. Open your [personal developer instance](https://developer.servicenow.com/app.do#!/instance?wu=true)
-2. In the navigation menu, search 'System Definition' and then select the sub-category 'Scripts - Background'
-3. '''javascript
+2. In the navigation menu, search `System Definition` and then select the sub-category `Scripts - Background`
+3. ```javascript
 // Here is an example that gets the count of number of new incidents and provides the INC number and link
 var gr = new GlideRecord('incident'); // create new GlideRecord from incident table
 gr.addQuery('active', true); // filter out for active incidents only
@@ -23,9 +23,9 @@ while(gr.next()) { // loop through records
    gs.info(gr.getValue('number')); // print out INC number
    gs.info(gr.getLink(false)); // print out INC link
 }
-'''
-4. Click the 'Run script' button
-5. The script will run and the result will show something like this: '***Script: Number of incidents: 8'
+```
+4. Click the `Run script` button
+5. The script will run and the result will show something like this: ` ***Script: Number of incidents: 8`
 You can use this process to test out different GlideRecord examples
 
 ## Resources
