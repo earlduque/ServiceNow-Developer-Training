@@ -8,7 +8,8 @@ The ```GlideRecord``` class is used for executing database operations without ha
 To practice using `GlideRecord`: 
 1. Open your [personal developer instance](https://developer.servicenow.com/app.do#!/instance?wu=true)
 2. In the navigation menu, search `System Definition` and then select the sub-category `Scripts - Background`
-3. ```javascript
+3. 
+```javascript
 // Here is an example that gets the count of number of new incidents and provides the INC number and link
 var gr = new GlideRecord('incident'); // create new GlideRecord from incident table
 gr.addQuery('active', true); // filter out for active incidents only
