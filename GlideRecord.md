@@ -32,7 +32,7 @@ while(incident_gr.next()) {
 ```
 In the above code:
 
-- ```var incident_gr = new GlideRecord('incident');``` creates a new GlideRecord object called ```incident_gr``` which accesses the incident table.
+- ```var incident_gr = new GlideRecord('incident');``` creates a new ```GlideRecord``` object called ```incident_gr``` which accesses the incident table. **Important:** refrain from using ```gr``` as a name for your ```GlideRecord``` Objects as many scripts use this name for their ```GlideRecord``` objects. Having different ```GlideRecord``` objects with the same name could produce odd errors which are difficult to debug.
 
 - ```addQuery()``` is used to add filters to our query. These filters help specify properties which we would like our queried results to have.
 
