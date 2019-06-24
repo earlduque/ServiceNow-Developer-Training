@@ -42,6 +42,20 @@ while(gr.next()) {
 
 You can use this process to test out different GlideRecord examples
 
+## Additional Examples
+We can use GlideRecord methods to make changes such as inserts, updates, and deletions.
+Here's an example to create a new incident using the `initialize` and `insert` methods.
+
+``` javascript
+//Create a new Incident record and populate the fields with the values below
+var gr = new GlideRecord('incident');
+gr.initialize();
+gr.short_description = 'Issue with signing into email';
+gr.category = 'email';
+gr.caller_id.setDisplayValue('Earl Duque');
+gr.insert();
+```
+
 ## Resources
 [Using GlideRecord to Query Tables](https://docs.servicenow.com/bundle/madrid-application-development/page/script/server-scripting/concept/c_UsingGlideRecordToQueryTables.html)
 
