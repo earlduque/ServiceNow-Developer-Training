@@ -1,4 +1,4 @@
-# GlideRecords
+# GlideRecord
 Objective: Learn how to use `GlideRecord` within ServiceNow
 
 ## Overview
