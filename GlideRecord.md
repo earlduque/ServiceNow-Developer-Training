@@ -57,6 +57,7 @@ gr.insert();
 ```
 
 ## Resources
+For additional information, refer to:
 [Using GlideRecord to Query Tables](https://docs.servicenow.com/bundle/madrid-application-development/page/script/server-scripting/concept/c_UsingGlideRecordToQueryTables.html)
 
 [GlideRecord Documentation](https://docs.servicenow.com/bundle/madrid-application-development/page/app-store/dev_portal/API_reference/glideRecordScoped/concept/c_GlideRecordScopedAPI.html)
