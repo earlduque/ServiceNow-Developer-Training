@@ -32,18 +32,24 @@ while(incident_gr.next()) {
 ```
 In the above code:
 
--```var incident_gr = new GlideRecord('incident');``` creates a new GlideRecord object called ```incident_gr``` which accesses the incident table.
--```addQuery()``` is used to add filters to our query. These filters help specify properties which we would like our queried results to have.
--```query()``` tells our GlideRecord object to query the records which satisfy the filters we added using ```addQuery()```. All results are added to a list in our ```GlideRecord``` object.
--```gs.info()``` serves as a print function, allowing us to display information to the user.
--```next()``` returns the next record in the list of records contained in our GlideRecord object. It should be noted that when used in the while loop:
+- ```var incident_gr = new GlideRecord('incident');``` creates a new GlideRecord object called ```incident_gr``` which accesses the incident table.
+
+- ```addQuery()``` is used to add filters to our query. These filters help specify properties which we would like our queried results to have.
+
+- ```query()``` tells our GlideRecord object to query the records which satisfy the filters we added using ```addQuery()```. All results are added to a list in our ```GlideRecord``` object.
+
+- ```gs.info()``` serves as a print function, allowing us to display information to the user.
+
+- ```next()``` returns the next record in the list of records contained in our GlideRecord object. It should be noted that when used in the while loop:
+
 ```
 while(incident_gr.next()){
    //some code
 }
 ```
 The loop evaluates to ```true``` if the object returned by ```incident_gr.next()``` is not null, or in otherwords, if there are still object(s) in the list.
--```getValue()``` returns a property value of the current record.
+
+- ```getValue()``` returns a property value of the current record.
 
 4. Click the `Run script` button
 5. The script will run and the result will show something like this: 
