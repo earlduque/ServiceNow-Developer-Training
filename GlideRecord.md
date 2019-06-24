@@ -47,7 +47,7 @@ while(incident_gr.next()){
    //some code
 }
 ```
-The loop evaluates to ```true``` if the object returned by ```incident_gr.next()``` is not null, or in otherwords, if there are still object(s) in the list.
+The loop evaluates to ```true``` if the next object in the list is not null, or in otherwords, if there are still object(s) in the list.
 
 - ```getValue()``` returns a property value of the current record.
 
