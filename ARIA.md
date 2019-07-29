@@ -20,33 +20,33 @@ These are the characteristics and current conditions of components and are close
 More information available in ARIA [documentation](https://www.w3.org/TR/wai-aria/#introstates).
 
 ## The Five Rules of ARIA Use
-1. If you can use a native HTML element or attribute with the semantics and behavior you require **already built in**, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible**,then do so.**
-  * Example:
-  ```HTML
-  <span class="link" onclick="..." role="link">
-      Google
-  </span>
-  ```
-  Despite that screen readers announce this element as a link, using ARIA in this situation over the proper `<a>` tag leads to missing standard functionality and issues like the element not being focusable, the need for custom JavaScript, and the browser history may be broken.
+1. If you can use a native HTML element or attribute with the semantics and behavior you require **already built in**, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, **then do so.**
+   * Example:
+   ```HTML
+   <span class="link" onclick="..." role="link">
+       Google
+   </span>
+   ```
+   * Despite that screen readers announce this element as a link, using ARIA in this situation over the proper `<a>` tag leads to missing standard functionality and issues like the element not being focusable, the need for custom JavaScript, and the browser history may be broken.
   
 2. Do not change native semantics, unless you really have to.
-  * Do not put a role in an element where the semantic meaning is overwritten:
-    ```HTML
-    <h2 role="tab">Heading Tab</h2>
-    ```
-  * Do, instead, wrap it in a generic element like `<div>` and assign the role to the generic element:
-    ```HTML
-    <div role="tab">
-        <h2>Heading Tab</h2>
-    </div>
-    ```
+   * Do not put a role in an element where the semantic meaning is overwritten:
+     ```HTML
+     <h2 role="tab">Heading Tab</h2>
+     ```
+   * Do, instead, wrap it in a generic element like `<div>` and assign the role to the generic element:
+     ```HTML
+     <div role="tab">
+         <h2>Heading Tab</h2>
+     </div>
+     ```
 3. All interactive ARIA controls must be usable with the keyboard.
-  * Click, tap, drag and drop, slide, and scroll must all have an equivalent action that can be performed using a keyboard.
-  * All interactive widgets must be scripted to respond to standard keystrokes or keystroke combinations where applicable.
+   * Click, tap, drag and drop, slide, and scroll must all have an equivalent action that can be performed using a keyboard.
+   * All interactive widgets must be scripted to respond to standard keystrokes or keystroke combinations where applicable.
 4. Do not use `role="presentation"` or `aria-hidden="true"` on a **focusable** element.
-  * Using either of these will result in some users focusing on 'nothing'.
+   * Using either of these will result in some users focusing on 'nothing'.
 5. All interactive elements must have an [accessible name](http://www.w3.org/TR/accname-aam-1.1/#dfn-accessible-name).
-  * An interactive element only has an accessible name when its Accessibility API accessible name (or equivalent) has a value. ([Examples](https://w3c.github.io/using-aria/#fifthrule))
+   * An interactive element only has an accessible name when its Accessibility API accessible name (or equivalent) has a value. ([Examples](https://w3c.github.io/using-aria/#fifthrule))
 
 ## Other Notes
 In general, it is better practice to not treat users who use accessibility tools differently than those who do not. For example, it is questionable to use code like
