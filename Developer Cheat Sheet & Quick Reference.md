@@ -135,4 +135,4 @@ var hasRole  = gs.hasRole('itil'); // Determine if current user has 'itil' role
 
 
 ## References
-Copied over from ServiceNow _Developer Cheat Sheet + Quick Reference_ brochure. Slight edits have been made. The original document can be found [here](images/Developer Cheat Sheet - Original Document.pdf).
+Copied over from ServiceNow _Developer Cheat Sheet + Quick Reference_ brochure. Slight edits have been made. The original document can be found [here](images/Developer%20Cheat%20Sheet%20-%20Original%20Document.pdf).
