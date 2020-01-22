@@ -14,5 +14,5 @@
 
 -   The UC Davis ServiceNow instances contain sensitive information and therefore external update sets should be implemented with caution.
 -   Fully review every update within the update set to ensure that the intended functionality and only the intended functionality is part of the update.
--   Do not implement external update sets if they look like they may affect other developers work negatively or if they would turn off functionality that is currently in-use in some way for the instance.
--   Do not implement update sets that requires outside connections to unknown sources in order to function.
+-   Do not implement external update sets if they look like they may affect other developers work negatively or if they would turn off functionality that is currently in-use in some way by another area in the instance.
+-   Do not implement update sets that requires outside connections to unknown sources.
