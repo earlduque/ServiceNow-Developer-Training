@@ -12,6 +12,7 @@ Aka Widgets, Pages, and the front-end.
 - Design widgets to be re-usable
 - Do not edit other application widgets without permission
 - Copy out-of-box widgets and edit the copy instead of editing the original.
+- Be aware of how many libraries you import as it can impact performance.
 
 ### Pages
 
