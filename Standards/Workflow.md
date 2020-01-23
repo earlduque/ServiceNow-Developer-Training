@@ -1,4 +1,4 @@
-# Worflow Standards
+# Workflow Standards
 
 A ServiceNow workflow is used to automate processes. A workflow is a sequence of activities, such as generating records, notifying users of pending approvals, or running scripts. Workflows contain activities that are a set of instructions, including but not limited to approvals, scripting, timers, and email notifications.  
   
