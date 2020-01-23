@@ -53,7 +53,7 @@ right and checking "Enable Preview". This will allow you to see what your widget
 looks like after you hit Save to whatever changes you've made.
 
 Your widget view should look something like this:
-![Initial Widget View](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/initial-widget-view.png)
+![Initial Widget View](images/initial-widget-view.png)
 
 ## Add HTML to Your Widget
 
@@ -518,7 +518,7 @@ p ~ span {
 }
 ```
 
-![Final Widget View](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/final-widget-view.png)
+![Final Widget View](images/final-widget-view.png)
 
 ## Resources
 
