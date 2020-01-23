@@ -35,7 +35,7 @@ You should now be able to add variable sets to your catalog item.
 From the Variable Sets tab, click on the "Edit" button and add the "Standard Employee Questions" variable set to your catalog item.
 
 Hit the "Try It" button to preview what your catalog item looks like so far. You should see something like this:
-![first-try-it](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/first-try-it.png)
+![first-try-it](images/first-try-it.png)
 
 At UC Davis, catalog items are *always* submitted using the Service Portal. To view your catalog item in the Service Portal on your personal instance instead, right click on the header of the catalog item and select "Copy sys_id." 
 Go to the following link, replacing with your personal instance and the catalog sys_id you just copied: 
@@ -111,7 +111,7 @@ Add the rest of these variables:
 
 Hit the "Try It" button to see your catalog item so far. It should look something like this:
 
-![second-try-it](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/second-try-it.png)
+![second-try-it](images/second-try-it.png)
 
 ## Catalog UI Policies
 
@@ -214,7 +214,7 @@ To start, click the magnifying glass icon on the Workflow field of your catalog 
 Hit "Submit".
 
 The starting workflow should look like this:
-![initial-workflow](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/initial-workflow.png)
+![initial-workflow](images/initial-workflow.png)
 
 Add these tiles to create the workflow:
 
@@ -276,7 +276,7 @@ Add these tiles to create the workflow:
 
 Connect the tiles like this, so it looks like the final workflow:
 
-![final-workflow](https://github.com/earlduque/ServiceNow-Developer-Training/blob/master/images/final-workflow.png)
+![final-workflow](images/final-workflow.png)
 
 So, what exactly is going on?
 
