@@ -7,8 +7,10 @@ This repository will serve to train new hires in the fundamental concepts of Ser
 
 1. [ServiceNow Foundation Videos](ServiceNow Foundation Videos.md)
 2. [Update Set Instructions](Update Set Instructions.md)
-3. [Catalog Items](Catalog Items.md)
-4. [Catalog Items - Personal Instance](Catalog Items - Personal Instance.md)
+3. Catalog Items
+    - [Catalog Items - Flow Designer](Catalog Items - Flow.md)
+    - [Catalog Items - Worflow](Catalog Items - Workflow.md)
+4. [Catalog Items - Personal Instance w\/Workflow](Catalog Items - Personal Instance.md)
 5. [UI Policies](UI Policies.md)
 6. [Client Scripts](Client Scripts.md)
 7. [GlideRecord](GlideRecord.md)
