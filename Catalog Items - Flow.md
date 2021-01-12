@@ -1,7 +1,7 @@
 # Creating a complete catalog item
 Objective: learn about catalog items, the request catalog, request items, business rules, variables, variable sets, UI policies, client scripts, and workflows.
 
-Login to the sandbox https://snsandbox.service-now.com/
+Login to the sandbox <https://snsandbox.service-now.com/>
 
 ### Create the catalog item
 1. Go to the Catalog Items table (Look for Request Catalog Configuration > Catalog Defnitions > Maintain Items)
@@ -13,12 +13,12 @@ Login to the sandbox https://snsandbox.service-now.com/
 	4. Short Description: A catalog item designed for practicing servicenow admin fundamental skills
 	5. Portal Settings, Request method: Submit
 4. Right click the header and select save
-5. See if your catalog item shows up here https://snsandbox.ucsd.edu/its?id=sc_category&sys_id=9af0e0ab1ba92810970cb912cd4bcb13&catalog_id=-1
+5. See if your catalog item shows up here <https://snsandbox.ucsd.edu/its?id=sc_category&sys_id=9af0e0ab1ba92810970cb912cd4bcb13&catalog_id=-1>
 
 ### Add variables/variable sets
 1. Scroll down to the related lists section (the tabs at the bottom not to be confused with Related Links)
 
-![related-lists](images/related-lists.PNG)
+![Related lists](images/related-lists.PNG)
 
 2. At any time during your catalog item creation, feel free to go to your catalog item in the ServiceHub and change around these values to see how they affect how your form looks.
 	* The order value changes the position of each variable field. The least-valued variable will be at the top of the page and the greatest-valued will be at the bottom.
@@ -88,7 +88,7 @@ Take this time to go back to your catalog item and add more variables of differe
 
 After you add more variables and play with the settings and other available tabs. Go practice more usage of UI Policies and Catalog Scripts.
 
-You can look at https://docs.servicenow.com/bundle/paris-servicenow-platform/page/product/service-catalog-management/concept/c_IntroductionToCatalogItems.html for official documentation. Don't worry about flows yet, we'll get there next.
+You can look at <https://docs.servicenow.com/bundle/paris-servicenow-platform/page/product/service-catalog-management/concept/c_IntroductionToCatalogItems.html> for official documentation. Don't worry about flows yet, we'll get there next.
 
 ### Flows
 You catalog item right now has some good, core functionality. When a user submits it, it creates a record of information that people can review.
@@ -145,7 +145,7 @@ Your catalog item now has this functionality:
 A lot more functionality just from a simple flow!
 
 Go and actually test these scenarios by submitting your form several times. You can see "approvals" and "tasks" show up on the request item record after you submit the form.
-* To approve or reject an approval you can either go here: https://snsandbox.ucsd.edu/its?id=approvals
+* To approve or reject an approval you can either go here: <https://snsandbox.ucsd.edu/its?id=approvals>
 * To complete a Catalog Task, go to the newly created request item and scroll down to the "Catalog Tasks" related list
 
 Did everything happen that you expected?
