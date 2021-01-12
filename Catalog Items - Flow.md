@@ -17,7 +17,9 @@ Login to the sandbox https://snsandbox.service-now.com/
 
 ### Add variables/variable sets
 1. Scroll down to the related lists section (the tabs at the bottom not to be confused with Related Links)
+
 ![related-lists](images/related-lists.PNG)
+
 2. At any time during your catalog item creation, feel free to go to your catalog item in the ServiceHub and change around these values to see how they affect how your form looks.
 	* The order value changes the position of each variable field. The least-valued variable will be at the top of the page and the greatest-valued will be at the bottom.
 3. Go back to the related lists for your catalog items and let's begin creating some variables for you to submit. Click "New" on the variables related list tab to make the following simple variables (pressing submit after each one):
@@ -101,14 +103,14 @@ Note: Flows are powerful, and with great power comes great responsibility. It is
 
 4. Flows can be triggered by many things, but we want this to be triggered by your catalog item. So under Trigger, set it to Service Catalog
 
-![Flow trigger](images/flow-trigger.png)
+![Flow trigger](images/flow-trigger.PNG)
 
 5. Flows only pull in information when explictly told (to save memory), so we need to pull the user's answers first. So for your first action, add the ServiceNow Core action called "Get Catalog Variables"
 	* Use the data pill picke to attach the trigger to the "Submitted Request" field
 	* Select your catalog item for "Template Catalog Item
 	* Select all your catalog variables that are available
 
-![Get Variables](images/get-variables.png)
+![Get Variables](images/get-variables.PNG)
 
 6. For your next action, add the "If" flow logic
 	* Use the datapicker and get your checkbox variable from Action #1
@@ -116,7 +118,7 @@ Note: Flows are powerful, and with great power comes great responsibility. It is
 
 7. Under the If branch, add another action from the ServiceNow Core called "Ask for Approval"
 	* Record should be your trigger once again (this should fill out several other fields)
-	* for Rules, set it to "Anyone Approves" and then click ![Person](images/add-person.png) and add yourself
+	* for Rules, set it to "Anyone Approves" and then click ![Person](images/add-person.PNG) and add yourself
 8. On the main branch of your flow, add the "Else" flow logic action.
 9. Under the Else branch, add another action from the ServiceNow Core called "Create Catalog Task"
 	* Requested Item should b your trigger once again
@@ -129,7 +131,7 @@ Note: Flows are powerful, and with great power comes great responsibility. It is
 11. Save your flow and activate it.
 12. That's it! Your flow should have the same steps as this image:
 
-![Full flow](images/full-flow.png)
+![Full flow](images/full-flow.PNG)
 
 13. Go back to your catalog item
 14. In the flow field, add your flow and save/update your item
