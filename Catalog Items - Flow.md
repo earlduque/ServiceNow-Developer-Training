@@ -1,7 +1,7 @@
 # Creating a complete catalog item
 Objective: learn about catalog items, the request catalog, request items, business rules, variables, variable sets, UI policies, client scripts, and workflows.
 
-Login to the sandbox <https://snsandbox.service-now.com/>
+Login to the sandbox <https://snsandbox.ucsd.edu/>
 
 ### Create the catalog item
 1. Go to the Catalog Items table (Look for Request Catalog Configuration > Catalog Defnitions > Maintain Items)
