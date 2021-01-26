@@ -106,28 +106,28 @@ Note: Flows are powerful, and with great power comes great responsibility. It is
 ![Flow trigger](images/flow-trigger.PNG)
 
 5. Flows only pull in information when explictly told (to save memory), so we need to pull the user's answers first. So for your first action, add the ServiceNow Core action called "Get Catalog Variables"
-	* Use the data pill picke to attach the trigger to the "Submitted Request" field
-	* Select your catalog item for "Template Catalog Item
+	* Click the data pill picker ![Pill](images/pill-picker.png). You will only see one trigger here because we only set one trigger above. Select "Trigger - Service Catalog > Requested Item" to attach the trigger to the "Submitted Request" field
+	* Select your catalog item for "Template Catalog" field
 	* Select all your catalog variables that are available
 
 ![Get Variables](images/get-variables.PNG)
 
-6. For your next action, add the "If" flow logic
+6. For your next action, select Flow Logic > "If"
 	* Use the datapicker and get your checkbox variable from Action #1
 	* Check for if true
 
 7. Under the If branch, add another action from the ServiceNow Core called "Ask for Approval"
 	* Record should be your trigger once again (this should fill out several other fields)
-	* for Rules, set it to "Anyone Approves" and then click ![Person](images/add-person.PNG) and add yourself
+	* For Rules > -Choose Approval Rule field, set it to "Anyone Approves" and then click ![Person](images/add-person.PNG) and add yourself. If you find multiple instances of your name, select a few of them to add to the approval list (one of them _will_ go through)
 8. On the main branch of your flow, add the "Else" flow logic action.
 9. Under the Else branch, add another action from the ServiceNow Core called "Create Catalog Task"
-	* Requested Item should b your trigger once again
+	* Requested Item should be your trigger once again
 	* Put any short description you want (usually an action like: Fulfill, or fix this, etc.)
-	* For fields, set the assignment group to ITS-SNOW-Students and the assigned to as yourself
-	* Pull in all your variables from your catalog item
+	* For fields, do add field value > select a field > "Assignment group" and set the assignment group to ITS-SNOW-Students. Add another field value called  "Assigned to", and add yourself. Again, if you have multiple instances, add a few.
+	* For Template Catalog Item, select your catalog item, and pull in all your variables from your catalog item
 10. On the main branch of your flow, add a "Update Record" action
 	* Record should be your trigger
-	* For fields, set "Status" to "Closed Complete"
+	* For fields, do add field value > "Status", and set it to "Closed Complete"
 11. Save your flow and activate it.
 12. That's it! Your flow should have the same steps as this image:
 
@@ -148,7 +148,7 @@ Go and actually test these scenarios by submitting your form several times. You 
 * To approve or reject an approval you can either go here: <https://snsandbox.ucsd.edu/its?id=approvals>
 * To complete a Catalog Task, go to the newly created request item and scroll down to the "Catalog Tasks" related list
 
-Did everything happen that you expected?
+Did everything happen that you expected? **If this is not working for you, double check your Catalog Item to see if your Process Engine > Flow has your Flow there.**
 
 As an additional note: we do have some other standards regarding what should always be included in a catalog item and flow, but you'll learn those as time progresses.
 
