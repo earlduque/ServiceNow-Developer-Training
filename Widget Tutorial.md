@@ -68,8 +68,42 @@ After querying a table, angular directives are used to display the results of th
 `Ng-bind` is used to attach a variable from the client script to the html page.
 
 ## Tutorial
+For this widget, suppose you are interested in seeing which incidents your team should work on resolving first in order to work most efficiently.
 ### Create your Widget
+1. Log on to your PDI (personal developer instance) in ServiceNow. If you do not have one, sign up [here](https://developer.servicenow.com/dev.do).
+![Colorful Modern Stickers Remote Learning Events and Special Interest Presentation](https://user-images.githubusercontent.com/63329562/110164545-5b9d2300-7da6-11eb-9f2e-6eb14d40c268.jpg)
+2. Navigate to **Service Portal** -> **Service Portal Configuration** -> **Widget Editor** -> **Create New Widget**
+3. A pop-up will appear. Name your Widget Name and Widget ID. 
+
+![e31db13272e7462856d9bfaa0bfc1d0c](https://user-images.githubusercontent.com/63329562/110165083-38bf3e80-7da7-11eb-8f36-dfb458afaae4.png)
+
+**Note:** You can test out your widget and see what it looks like at any time by going to a new tab using this URL: {yourInstanceUrl}/sp?id=practice_widget
+
+4. You should now be able to see the HTML Template, Client Script, and Server Script. This will be where you will be customizing your widget.
+
+![b615e9c237b8a71d391c8a385a8f1942](https://user-images.githubusercontent.com/63329562/110165569-f5b19b00-7da7-11eb-8513-c2011936b555.png)
+
+
 ### Add Server Script to Widget
+1. For our Server Script, we want to query the Incident Table to find the 10 most recent active incidents that have a Impact="1" and Urgency="1". You can preview this table in your portal by navigating to **incident.list**
+3. Using the template from the **Using GlideRecords to Query Tables** section, you can now create your query.
+```
+var urgentGR = new GlideRecord('incident');
+urgentGR.addActiveQuery();
+urgentGR.addQuery("impact,"1");
+urgentGR.addQuery("urgency","1");
+urgentGR.orderByDesc("sys_updated_on");
+urgentGR.setLimit(10);
+urgentGR.runQuery();
+
+data.table = [];
+
+while(urgentGR.next()) {
+var item = ();
+
+}
+
+```
 ### Add HTML to Widget
 ### Use Angular to Add Data to Widget
 
