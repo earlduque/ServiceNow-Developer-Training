@@ -4,7 +4,7 @@ Objective: Learn what Angular is used for in HTML, how to query databases in ser
 ## Table of Contents
 
 ## What is a Widget?
-A widget is a reuseable components which make up the functionality of a portal page and allow users to interact with the service portal and displays information. There are six parts to a widget: HTML, CSS, Client Script, Server Script, Link Function, Options. We will only be focusing on HTML, Client and Server Scripts, and CSS for this tutorial. 
+A widget is a reuseable component which make up the functionality of a portal page and allow users to interact with the service portal and displays information. There are six parts to a widget: HTML, CSS, Client Script, Server Script, Link Function, Options. We will only be focusing on HTML, Client and Server Scripts, and CSS for this tutorial. 
 
 ### HTML
 The HTML accepts and displays data, as well as provides the basic structure to the widget. This will be what the user sees in the end product and browser.
@@ -51,6 +51,9 @@ data.records = [];
 
 //While there is another record to access in the GlideRecord, push record to array
 while(targetGR.next()) {
+ var temp = {};
+ //choose what information to display
+ data.records.push(temp);
 }
 ```
 
@@ -85,27 +88,56 @@ For this widget, suppose you are interested in seeing which incidents your team 
 
 
 ### Add Server Script to Widget
-1. For our Server Script, we want to query the Incident Table to find the 10 most recent active incidents that have a Impact="1" and Urgency="1". You can preview this table in your portal by navigating to **incident.list**
+1. For our Server Script, we want to query the Incident Table to find the 10 most recent active incidents that have a Priority=1. You can preview this table in your portal by navigating to **incident.list**
 3. Using the template from the **Using GlideRecords to Query Tables** section, you can now create your query.
 ```
-var urgentGR = new GlideRecord('incident');
-urgentGR.addActiveQuery();
-urgentGR.addQuery("impact,"1");
-urgentGR.addQuery("urgency","1");
-urgentGR.orderByDesc("sys_updated_on");
-urgentGR.setLimit(10);
-urgentGR.runQuery();
+var incRec = new GlideRecord('incident');
+incRec.addQuery('active', true);
+incRec.addQuery('priority', 1);
+incRec.orderByDesc('sys_created_on');
+incRec.setLimit(10);
+incRec.query();
+data.incidentList = [];
 
-data.table = [];
-
-while(urgentGR.next()) {
-var item = ();
-
-}
+while(incRec.next()) {
+ var temp = {};
+ temp.number = incRec.number.toString();
+ temp.short_description = incRec.short_description.toString();
+ data.incidentList.push(temp);
+    }
 
 ```
 ### Add HTML to Widget
+**Note**: Panels are bordered boxes with some padding around its elements. These are part of the Bootstrap CSS Framework that can help customize the look of your widget. 
+```
+<div class="panel panel-default">
+  <div class="panel-heading">${Most Current Priority 1 Tickets}
+   </div>
+  <div class="panel-body">
+   </div>
+</div>
+```
 ### Use Angular to Add Data to Widget
+Based on the HTML template above, where does it make sense to put the data within the panel?
+```
+<table ng-repeat="incident in data.incidentList">
+  <td title="incident.number">{{incident.number}} - </td>
+  <td title="incident.short_description">{{incident.short_description}}</td>
+</table>
+```
+Save your widget by pressing the Save button, or by using the hotkey ⌘+s. Congratulations! You can now preview your completed widget. 
+![b2983bd93e5c1c2d58cdf1742ac32461](https://user-images.githubusercontent.com/63329562/111001166-28273f00-8338-11eb-9a93-ffc9deef4aa6.png)
+
+*BONUS* Try these other ideas to further customize your widget:
+* Add CSS to your widget to change the font, size, etc. Explore Bootstrap for more formatting options.
+* Implement a searchbar to your widget.
+* Implement buttons to your widget that change the value of a field when clicked.
 
 ## Other Related Articles
- 
+[Bootstrap Panels](https://www.w3schools.com/bootstrap/bootstrap_panels.asp)
+
+[Angular Basics and Data Flow](https://www.learnnowlab.com/Service-Portal-Widgets/)
+
+[Javascript Operators](https://docs.servicenow.com/bundle/madrid-application-development/page/script/server-scripting/concept/c_UsingGlideRecordToQueryTables.html)
+
+[Why You Shouldn't Name Your Variable GR](https://www.youtube.com/watch?v=H_eoB6LXPrs&ab_channel=EarlDuque)
