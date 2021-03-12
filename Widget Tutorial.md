@@ -1,8 +1,6 @@
 # Create a Widget Using AngularJS and GlideRecords
 Objective: Learn what Angular is used for in HTML, how to query databases in server script using GlideRecords
 
-## Table of Contents
-
 ## What is a Widget?
 A widget is a reuseable component which make up the functionality of a portal page and allow users to interact with the service portal and displays information. There are six parts to a widget: HTML, CSS, Client Script, Server Script, Link Function, Options. We will only be focusing on HTML, Client and Server Scripts, and CSS for this tutorial. 
 
