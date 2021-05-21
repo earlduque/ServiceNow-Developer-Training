@@ -13,7 +13,7 @@ Login to the sandbox <https://snsandbox.ucsd.edu/>
 	4. Short Description: A catalog item designed for practicing servicenow admin fundamental skills
 	5. Portal Settings, Request method: Submit
 4. Right click the header and select save
-5. See if your catalog item shows up here <https://snsandbox.ucsd.edu/its?id=sc_category&sys_id=9af0e0ab1ba92810970cb912cd4bcb13&catalog_id=-1>
+5. See if your catalog item shows up here <https://snsandbox.ucsd.edu/its?id=sc_category&sys_id=182b81851b903810331285d56b4bcb2c&catalog_id=-1>
 
 ### Add variables/variable sets
 1. Scroll down to the related lists section (the tabs at the bottom not to be confused with Related Links)
