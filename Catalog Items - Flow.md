@@ -1,7 +1,7 @@
 # Creating a complete catalog item
 Objective: learn about catalog items, the request catalog, request items, business rules, variables, variable sets, UI policies, client scripts, and workflows.
 
-Login to the sandbox <https://snsandbox.ucsd.edu/>
+Login to your personal developer instance.
 
 ### Create the catalog item
 1. Go to the Catalog Items table (Look for Request Catalog Configuration > Catalog Defnitions > Maintain Items)
@@ -9,11 +9,11 @@ Login to the sandbox <https://snsandbox.ucsd.edu/>
 3. Fill out these values:
 	1. Name: [your name]'s Test Catalog Item
 	2. Catalogs: IT Services Request Catalog
-	3. Category: Student Practice
+	3. Category: Student Practice (you might have to make this if someone hasn't already made it for you)
 	4. Short Description: A catalog item designed for practicing servicenow admin fundamental skills
 	5. Portal Settings, Request method: Submit
 4. Right click the header and select save
-5. See if your catalog item shows up here <https://snsandbox.ucsd.edu/its?id=sc_category&sys_id=182b81851b903810331285d56b4bcb2c&catalog_id=-1>
+5. See if your catalog item shows up in your service portal (go to `your_instance_name`.service-now.com/sp)
 
 ### Add variables/variable sets
 1. Scroll down to the related lists section (the tabs at the bottom not to be confused with Related Links)
@@ -137,7 +137,7 @@ Note: Flows are powerful, and with great power comes great responsibility. It is
 14. In the flow field, add your flow and save/update your item
 
 Your catalog item now has this functionality:
-* Upon submission, the user is emailed letting them know that we received their request (this happens automatically without your configuration). (note that emails are disabled in sandbox so you won't actually see the email)
+* Upon submission, the user is emailed letting them know that we received their request (this happens automatically without your configuration).
 * If the user did not mark the checkbox question as true, then it will create a task for you to complete and the task will remain open until that task is completed before the flow continues.
 * If the user marked the checkbox question as true/checked, then it will send an approval request to you first, and upon approval the flow will continues
 * If the task is completed, then a "completed" email is sent to the user
@@ -145,7 +145,7 @@ Your catalog item now has this functionality:
 A lot more functionality just from a simple flow!
 
 Go and actually test these scenarios by submitting your form several times. You can see "approvals" and "tasks" show up on the request item record after you submit the form.
-* To approve or reject an approval you can either go here: <https://snsandbox.ucsd.edu/its?id=approvals>
+* To approve or reject an approval you can either impersonate the approver and check the service portal, or type Approvals in the app nav.
 * To complete a Catalog Task, go to the newly created request item and scroll down to the "Catalog Tasks" related list
 
 Did everything happen that you expected? **If this is not working for you, double check your Catalog Item to see if your Process Engine > Flow has your Flow there.**

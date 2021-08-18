@@ -14,5 +14,4 @@
 - Do not add new role inclusions to existing out-of-box roles if those roles are already being utilized elsewhere.
 - It is preferred that new roles are created within scoped applications (not Global).
 - Do not ever include the admin or security admin role in a group
-- Do not grant admin access to other users. A rule is in place for IET Service Management to be notified every time this happens.
-- New ROLE groups for granting access to new roles should be requested from IET Service Management.
+- Do not grant admin access to other users.

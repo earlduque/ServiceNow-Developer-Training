@@ -3,7 +3,7 @@
 ## Outbound
 
 - Outbound calls to external APIs via REST, SOAP, or other methods are allowed.
-- Do not store API keys in plain-text on scriptstable records, instead put them in system properties.
+- Do not store API keys in plain-text on scriptable records, instead put them in system properties.
 - Intentionally rate limit outbound calls that occur rapidly (several per second). Make sure these calls are condition-based for when they occur instead of timer based.
 - Do not use ServiceNow to call an external API to check for updates rapidly. If you need live updates, attempt to create an inbound integration that is triggered by the external system, instead of polling for updates.
 - Prefer creating outbound service records that are called in script rather than creating an entire outbound call in individual scripts.

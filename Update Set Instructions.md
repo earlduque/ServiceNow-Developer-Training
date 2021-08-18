@@ -25,7 +25,7 @@ Update sets take all the changes you did and puts them together. It records all 
 ![picture3](https://user-images.githubusercontent.com/6828733/51413781-e1a57380-1b24-11e9-848f-60f1bb5c22cc.png)
 
 
-### 4. Name of your update set should be: IET related record (usually a story number), short description (story name)
+### 4. Name of your update set should be: `Your organization/department abbreviation` `related record (usually a story number)` - `short description (story name)`
 
 
 

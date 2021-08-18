@@ -1,6 +1,6 @@
 # Developer Mindset Standards
 
-+ Do debugging and research when something in your application or program is not working, and if debugging assistance is still needed, contact IET SM for help
++ Do debugging and research when something in your application or program is not working, and if debugging assistance is still needed, contact another developer for help
     + Take advantage of ServiceNow's debugging tools such as User Criteria Diagnostics, Debug Security Rules, JavaScript debugger
     + Research your issue using sites like ServiceNow community forms or ServicePortal.io
 + Be wary of directly copy-pasting code found online into your programs. Read through it first and understand what you are copying

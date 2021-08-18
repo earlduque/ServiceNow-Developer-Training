@@ -3,31 +3,30 @@
 Request catalogs and their catalog items (forms) are used to describe, support, and request services from service providers. 
  
 ### Catalog Item Style Guide 
-- Use the standard style guide to design catalog items. 
-- The catalog request item style guide is maintained on the ServiceNow in knowledge article KB0000991. Printed copies are considered drafts. 
+
+- Use your company provided style guide to design catalog items. 
 
 ### Request Catalog Style Guide
 
 This style guide is a set of standards to help the information technology community develop ServiceNow Request Catalog items.
 
 This style guide follows:
-- Guidelines provided by Strategic Communication which can be found at http://marketingtoolbox.ucdavis.edu
 - The Associated Press (AP) style guide and The Chicago Manual of Style, which UC Davis Strategic Communication follows
 - ServiceNow product documentation
-
-In addition to the standards listed above, the Information Educational Technology web development team has guidelines that can be referenced on their service page at http://itcatalog.ucdavis.edu/service/web-development.
  
 #### Audience 
+
 - Staff who have oversight and content management responsibilities for ServiceNow
 - IT community developers who work on ServiceNow modules, applications, and system components utilizing the Item Designer
 
 #### Purpose
+
 The Request Catalog is for service offerings. Services offerings may include both products and services.
 
 #### Request Item Writing Tips
 
 - **Avoid capitalizing every word in a header, question or phrase**. The first letter of the first word of variables in a catalog item should be capitalized (i.e. Phone number). Capitalize professional titles, organizations, and other proper nouns, but in general, avoid the use of caps.
-- **Avoid the use of acronyms**. If an acronym is required, the full name should be written out the first time it is used with its corresponding acronym in parenthesis (i.e. Information and Educational Technology (IET)).
+- **Avoid the use of acronyms**. If an acronym is required, the full name should be written out the first time it is used with its corresponding acronym in parenthesis (i.e. Associated Press (AP)).
 - **Use clear and concise language**. For variable questions, typically verbs are not necessary. (i.e. “Requestor’s job title” rather than “Enter the requestor’s job title.”)
 
 #### General Formatting
@@ -64,6 +63,7 @@ A cascading style sheet (CSS) has been created that adheres to University guidel
 6. **Multi line vs Single line** Question dependent, but multi lines should only be used for lengthy questions such as asking for additional detail.
 
 #### Guide to Usability
+
 - **Tooltips** (rollover or hover functionality) are the primary method used for "help text." The majority of variables in a form will require a tooltip; the exception to this standard is when the variable name is its definition.
 - **More information** should be used sparingly in support of more complicated content within the variable. This is a secondary solution to the tooltip. More information appears in grey under the input field. Do not include information directed to an individual or group, requirements, or terms and conditions. 
 - **Common variables** used in form design:

@@ -1,7 +1,7 @@
 # Creating a complete catalog item
 Objective: learn about catalog items, the request catalog, request items, business rules, variables, variable sets, UI policies, client scripts, and workflows.
 
-Login to the sandbox with your admin credentials via the side door https://ucdavisietsand.service-now.com/side_door.do
+Login to your personal developer instance.
 
 #### Create the catalog item
 1. Go to the Catalog Items table (Look for Service Catalog > Open Records > Maintain Items)
@@ -13,7 +13,7 @@ c. Catalogs: IT Campus Services
 d. Category: Student Practice
 e. Short Description: A catalog item designed for practicing servicenow admin fundamental skills
 4. Right click the header and select save
-5. See if your catalog item shows up here https://ucdavisietsand.service-now.com/servicehub/?id=ucd_view_service2&sys_id=47fe399513e1df00d26f5e7f3244b028&ucd_catalog=5ec4eed5134143003527bd122244b0af&parent=93056219134143003527bd122244b024
+5. See if your catalog item shows up in your service portal (go to `your_instance_name`.service-now.com/sp)
 
 #### Add variables/variable sets
 1. Scroll down to the related lists section (the tabs at the bottom not to be confused with Related Links)
@@ -164,7 +164,7 @@ Your catalog item now has this functionality:
 A lot more functionality just from a simple workflow!
 
 Go and actually test these scenarios by submitting your form several times. You can see "approvals" and "tasks" show up on the request item recordafter you submit the form.
-* To approve or reject an approval you can either go here: https://ucdavisietsand.service-now.com/servicehub/?id=ucd_my_stuffand click on "My approvals" or go to the newly created request item and scroll down to the "Approvers" related list
+* To approve or reject an approval you can either impersonate the approver and check the service portal, or type Approvals in the app nav.
 * To complete a Catalog Task, go to the newly created request item and scroll down to the "Catalog Tasks" related list
 
 Did everything happen that you expected?
