@@ -8,7 +8,7 @@ Login to your personal developer instance.
 2. Create new
 3. Fill out these values:
 	1. Name: [your name]'s Test Catalog Item
-	2. Catalogs: IT Services Request Catalog
+	2. Catalogs: Pick an existing catalog in the picker
 	3. Category: Student Practice (you might have to make this if someone hasn't already made it for you)
 	4. Short Description: A catalog item designed for practicing servicenow admin fundamental skills
 	5. Portal Settings, Request method: Submit
