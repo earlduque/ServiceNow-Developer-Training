@@ -1,5 +1,7 @@
 # Update Sets 
 
+Remember: different companies do things differently! The below doesn't necessarily apply to every dev team.
+
 ### Update Set Naming Conventions 
 
 Use a consistent naming convention for update sets. 
@@ -18,8 +20,9 @@ org_reference_desc_seq/date
 
 ### Good Practices for Update Sets 
  
-- Never delete an Update Set. 
+- Never delete an Update Set. (Some companies delete them in production though, YMMV)
 - Never re-open previously completed update sets. Create new ones instead. 
+  - Why? If another instance has retrieved your update set already then it will never try to retrieve your newly "updated" update set, resulting in desynced update sets.
 - Never manually merge update sets. Utilize batch functionality instead. 
 - Before completing an update set, review the update set to ensure that the only updates included pertain to the desired work. 
 - Preview update sets before committing them. 
